@@ -1,0 +1,39 @@
+[gd_scene load_steps=3 format=3 uid="uid://bnrtkjxhte3uq"]
+
+[ext_resource type="PackedScene" uid="uid://cqse1ofole2av" path="res://packed_scene/node/canvas_item/control/ret_flame_arrow.tscn" id="2_tgn3c"]
+[ext_resource type="Script" uid="uid://bdvrw4jmfxatd" path="res://script/object/node/canvas_item/2d/circle.gd" id="2_yacgv"]
+
+[node name="RetFlame" type="Control"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BackBufferCopy" type="BackBufferCopy" parent="."]
+copy_mode = 2
+
+[node name="Circle2D" type="Node2D" parent="."]
+self_modulate = Color(1, 1, 1, 0.5019608)
+position = Vector2(32, 32)
+script = ExtResource("2_yacgv")
+radius = 18.0
+filled = false
+width = 2.0
+metadata/_custom_type_script = "uid://bdvrw4jmfxatd"
+
+[node name="RetFlameArrow" parent="." instance=ExtResource("2_tgn3c")]
+layout_mode = 1
+rotation = -0.5235988
+
+[node name="RetFlameArrow2" parent="." instance=ExtResource("2_tgn3c")]
+layout_mode = 1
+rotation = 1.5707964
+
+[node name="RetFlameArrow3" parent="." instance=ExtResource("2_tgn3c")]
+layout_mode = 1
+rotation = 3.6651914

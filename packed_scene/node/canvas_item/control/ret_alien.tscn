@@ -1,0 +1,26 @@
+[gd_scene load_steps=2 format=3 uid="uid://delj2pq18sr36"]
+
+[ext_resource type="PackedScene" uid="uid://bcoel48d725i2" path="res://packed_scene/node/canvas_item/control/ret_alien_arrow.tscn" id="1_ccroy"]
+
+[node name="RetAlien" type="Control"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="RetAlienArrow" parent="." instance=ExtResource("1_ccroy")]
+layout_mode = 1
+rotation = 0.5235988
+
+[node name="RetAlienArrow2" parent="." instance=ExtResource("1_ccroy")]
+layout_mode = 1
+rotation = 2.6179938
+
+[node name="RetAlienArrow3" parent="." instance=ExtResource("1_ccroy")]
+layout_mode = 1
+rotation = 4.712389

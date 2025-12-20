@@ -1,0 +1,67 @@
+[gd_scene load_steps=4 format=3 uid="uid://n4o5be2n2xoj"]
+
+[ext_resource type="Script" uid="uid://bdvrw4jmfxatd" path="res://script/object/node/canvas_item/2d/circle.gd" id="1_g1f7x"]
+[ext_resource type="Script" uid="uid://bcm8ubq8g3ur8" path="res://script/object/node/canvas_item/2d/multiline.gd" id="2_bl2nu"]
+[ext_resource type="Script" uid="uid://c5belsintpoms" path="res://script/object/node/canvas_item/2d/arc.gd" id="3_bl2nu"]
+
+[node name="RetMachinegun" type="Control"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Multiline2D" type="Node2D" parent="."]
+self_modulate = Color(1, 1, 1, 0.5019608)
+script = ExtResource("2_bl2nu")
+points = PackedVector2Array(19, 0, 30, 0, 0, 19, 0, 30, -19, 0, -30, 0, 0, -19, 0, -30)
+width = 2.0
+
+[node name="Circle2D" type="Node2D" parent="."]
+script = ExtResource("1_g1f7x")
+radius = 10.0
+filled = false
+width = 2.0
+metadata/_custom_type_script = "uid://bdvrw4jmfxatd"
+
+[node name="Arc2D" type="Node2D" parent="."]
+script = ExtResource("3_bl2nu")
+radius = 31.0
+start_angle = -0.2617993877991494
+end_angle = 0.2617993877991494
+point_count = 9
+width = 2.0
+metadata/_custom_type_script = "uid://c5belsintpoms"
+
+[node name="Arc2D2" type="Node2D" parent="."]
+rotation = 1.5707964
+script = ExtResource("3_bl2nu")
+radius = 31.0
+start_angle = -0.2617993877991494
+end_angle = 0.2617993877991494
+point_count = 9
+width = 2.0
+metadata/_custom_type_script = "uid://c5belsintpoms"
+
+[node name="Arc2D3" type="Node2D" parent="."]
+rotation = 3.1415927
+script = ExtResource("3_bl2nu")
+radius = 31.0
+start_angle = -0.2617993877991494
+end_angle = 0.2617993877991494
+point_count = 9
+width = 2.0
+metadata/_custom_type_script = "uid://c5belsintpoms"
+
+[node name="Arc2D4" type="Node2D" parent="."]
+rotation = 4.712389
+script = ExtResource("3_bl2nu")
+radius = 31.0
+start_angle = -0.2617993877991494
+end_angle = 0.2617993877991494
+point_count = 9
+width = 2.0
+metadata/_custom_type_script = "uid://c5belsintpoms"

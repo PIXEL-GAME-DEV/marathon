@@ -46,5 +46,5 @@ func _draw() -> void:
 		aa = anti_aliasing_size / scale_factor
 	
 	draw_set_transform(Vector2.ZERO, 0, Vector2.ONE * aa)
-	draw_circle(Vector2.ZERO, radius / aa, Color.WHITE, filled, width / aa / 2,
+	draw_circle(Vector2.ZERO, radius / aa, Color.WHITE, filled, width / aa,
 			anti_aliased)

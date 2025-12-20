@@ -57,4 +57,4 @@ func _draw() -> void:
 		
 	draw_set_transform(Vector2.ZERO, 0, Vector2.ONE * aa)
 	draw_arc(Vector2.ZERO, radius / aa, start_angle, end_angle, point_count,
-			Color.WHITE, 2 * width / aa / 2, anti_aliased)
+			Color.WHITE, width / aa, anti_aliased)

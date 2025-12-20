@@ -45,4 +45,4 @@ func _draw() -> void:
 		p.append(point / aa)
 	
 	draw_set_transform(Vector2.ZERO, 0, Vector2.ONE * aa)
-	draw_multiline(p, Color.WHITE, width / aa / 2, anti_aliased)
+	draw_multiline(p, Color.WHITE, width / aa, anti_aliased)

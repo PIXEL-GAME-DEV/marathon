@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://u2bouyy4kvg0"]
+
+[node name="RetRocketArrow" type="Line2D"]
+points = PackedVector2Array(30, -7, 18, 0, 30, 7)
+width = 2.0
+begin_cap_mode = 1
+end_cap_mode = 1
+sharp_limit = 3.0

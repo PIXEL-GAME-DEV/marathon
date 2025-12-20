@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=3 uid="uid://bcoel48d725i2"]
+
+[ext_resource type="Script" uid="uid://bdvrw4jmfxatd" path="res://script/object/node/canvas_item/2d/circle.gd" id="1_4cqj6"]
+
+[node name="RetAlienArrow" type="Control"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Circle2D" type="Node2D" parent="."]
+position = Vector2(16, 0)
+script = ExtResource("1_4cqj6")
+radius = 4.0
+anti_aliased = true

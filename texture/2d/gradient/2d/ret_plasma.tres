@@ -1,0 +1,9 @@
+[gd_resource type="GradientTexture2D" load_steps=2 format=3 uid="uid://b6kxy56gse0vm"]
+
+[ext_resource type="Gradient" uid="uid://blkg7qyy56f2g" path="res://gradient/opaque_50_transparent_100.tres" id="1_s0miw"]
+
+[resource]
+gradient = ExtResource("1_s0miw")
+fill = 2
+fill_from = Vector2(1, 0)
+fill_to = Vector2(0, 1)
