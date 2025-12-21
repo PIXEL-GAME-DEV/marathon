@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://cc1ltavni0505"]
 
 [ext_resource type="Texture2D" uid="uid://d1o5iavmu57qq" path="res://texture/2d/compressed/icon.svg" id="1_evwrf"]
-[ext_resource type="Shader" uid="uid://dekh321wjijp1" path="res://shader/spatial/static.gdshader" id="11_fdonu"]
+[ext_resource type="Shader" uid="uid://cusfwhs8sh68x" path="res://shader/spatial/surface_texel.gdshader" id="2_ty3pu"]
 
 [sub_resource type="PhysicalSkyMaterial" id="PhysicalSkyMaterial_f6kva"]
 
@@ -19,9 +19,18 @@ albedo_texture = ExtResource("1_evwrf")
 uv1_triplanar = true
 texture_filter = 5
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_nrkfi"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_we277"]
 render_priority = 0
-shader = ExtResource("11_fdonu")
+shader = ExtResource("2_ty3pu")
+shader_parameter/albedo_color = Color(1, 1, 1, 1)
+shader_parameter/albedo_texture = ExtResource("1_evwrf")
+shader_parameter/uv1_scale = Vector3(2, 1, 1)
+shader_parameter/uv1_offset = Vector3(0, 0, 0)
+shader_parameter/uv1_triplanar = false
+shader_parameter/uv1_triplanar_sharpness = 1.0
+shader_parameter/uv1_world_triplanar = false
+shader_parameter/billboard_mode = 0
+shader_parameter/billboard_keep_scale = false
 
 [node name="Test" type="Node3D"]
 
@@ -39,8 +48,17 @@ use_collision = true
 size = Vector3(99, 2, 99)
 material = SubResource("StandardMaterial3D_ty3pu")
 
+[node name="CSGSphere3D" type="CSGSphere3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8638066, 0)
+radial_segments = 6
+rings = 3
+material = SubResource("ShaderMaterial_we277")
+
+[node name="CSGSphere3D2" type="CSGSphere3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.15127277, 1.6104523, -0.76123095)
+radial_segments = 6
+rings = 3
+material = SubResource("ShaderMaterial_we277")
+
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.94187, 0.33597767, 0, -0.33597767, 0.94187, 0, 1.2037072, 0.8743093)
-
-[node name="CSGSphere3D" type="CSGSphere3D" parent="."]
-material = SubResource("ShaderMaterial_nrkfi")
