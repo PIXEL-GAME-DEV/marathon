@@ -1,0 +1,7 @@
+[gd_resource type="NoiseTexture2D" load_steps=2 format=3 uid="uid://b0d3ny5ykni30"]
+
+[ext_resource type="FastNoiseLite" uid="uid://d0a1772runbyj" path="res://noise/fast_lite/value.tres" id="1_fwipu"]
+
+[resource]
+noise = ExtResource("1_fwipu")
+as_normal_map = true

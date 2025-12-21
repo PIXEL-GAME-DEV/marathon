@@ -13,7 +13,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Circle2D" type="Node2D" parent="."]
+use_parent_material = true
 position = Vector2(16, 0)
 script = ExtResource("1_4cqj6")
 radius = 4.0
-anti_aliased = true

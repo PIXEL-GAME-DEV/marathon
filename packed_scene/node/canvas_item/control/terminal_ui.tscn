@@ -1,0 +1,115 @@
+[gd_scene load_steps=4 format=3 uid="uid://i1j7d8wuaff6"]
+
+[ext_resource type="Theme" uid="uid://b7o05wkprcpwl" path="res://theme/terminal.tres" id="1_1dom7"]
+[ext_resource type="StyleBox" uid="uid://4ayhl2k8m13w" path="res://style_box/flat/box_white.tres" id="2_lou0m"]
+[ext_resource type="Texture2D" uid="uid://bce3dopfwohyt" path="res://texture/2d/compressed/marathon_logo.svg" id="3_qa6oa"]
+
+[node name="TerminalUI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_1dom7")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="VBoxContainer"]
+modulate = Color(1, 0, 0, 1)
+self_modulate = Color(0.2509804, 0.2509804, 0.2509804, 1)
+layout_mode = 2
+theme_override_styles/panel = ExtResource("2_lou0m")
+
+[node name="Label" type="Label" parent="VBoxContainer/PanelContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+text = "Opening Connection to ß.4.5-23"
+
+[node name="Label2" type="Label" parent="VBoxContainer/PanelContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+text = "1125 08.25.2337"
+
+[node name="CenterContainer" type="CenterContainer" parent="VBoxContainer"]
+modulate = Color(0, 1, 0, 1)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/CenterContainer"]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/CenterContainer/VBoxContainer"]
+texture_filter = 6
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("3_qa6oa")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer/CenterContainer/VBoxContainer"]
+custom_minimum_size = Vector2(512, 0)
+layout_mode = 2
+size_flags_vertical = 4
+bbcode_enabled = true
+text = "[b]U.E.S.C. Marathon[/b]
+Airlock 34-a Terminal Access <Port 19.1.2.128>"
+fit_content = true
+horizontal_alignment = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer"]
+visible = false
+modulate = Color(0, 1, 0, 1)
+layout_mode = 2
+size_flags_vertical = 3
+bbcode_enabled = true
+text = "<Message to All Marathon Terminals>
+
+[b]Marathon Emergency Systems Broadcast[/b]
+
+Today at 0820 hours, the Marathon came under surprise attack from unknown hostile forces. The Marathon has sustained serious damage.
+
+At 0830 hours, alien forces boarded the Marathon. The current situation is dire. All personnel are required to arm themselves and fight for their lives.
+<Posted 2794.7.3.14.08.39>
+
+***INCOMING MESSAGE FROM LEELA***
+
+Welcome to the Marathon. I am Leela, one of the two surviving Artificial Intelligences aboard the Marathon.  I have been severely damaged, and am working to understand the current situation.
+
+Find the teleport terminal located in the Hangar's control room. By that time, I should have a better idea of what is going on.
+
+***END MESSAGE***"
+
+[node name="PanelContainer2" type="PanelContainer" parent="VBoxContainer"]
+modulate = Color(1, 0, 0, 1)
+self_modulate = Color(0.2509804, 0.2509804, 0.2509804, 1)
+layout_mode = 2
+theme_override_styles/panel = ExtResource("2_lou0m")
+
+[node name="Label" type="Label" parent="VBoxContainer/PanelContainer2"]
+layout_mode = 2
+size_flags_horizontal = 0
+text = "CAS.qterm//CyberAcme Systems, Inc."
+
+[node name="Label2" type="Label" parent="VBoxContainer/PanelContainer2"]
+layout_mode = 2
+size_flags_horizontal = 8
+text = "<931.461.60231.14.vt920>"

@@ -19,6 +19,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Circle2D" type="Node2D" parent="."]
+use_parent_material = true
 position = Vector2(32, 32)
 script = ExtResource("1_tydbb")
 radius = 19.0
@@ -27,6 +28,7 @@ width = 2.0
 
 [node name="Arc2D" type="Node2D" parent="."]
 self_modulate = Color(1, 1, 1, 0.2509804)
+use_parent_material = true
 position = Vector2(32, 32)
 script = ExtResource("2_hwpsl")
 radius = 16.0
@@ -37,6 +39,7 @@ width = 4.0
 
 [node name="Arc2D2" type="Node2D" parent="."]
 self_modulate = Color(1, 1, 1, 0.2509804)
+use_parent_material = true
 position = Vector2(32, 32)
 script = ExtResource("2_hwpsl")
 radius = 16.0

@@ -14,13 +14,16 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="RetAlienArrow" parent="." instance=ExtResource("1_ccroy")]
+use_parent_material = true
 layout_mode = 1
 rotation = 0.5235988
 
 [node name="RetAlienArrow2" parent="." instance=ExtResource("1_ccroy")]
+use_parent_material = true
 layout_mode = 1
 rotation = 2.6179938
 
 [node name="RetAlienArrow3" parent="." instance=ExtResource("1_ccroy")]
+use_parent_material = true
 layout_mode = 1
 rotation = 4.712389

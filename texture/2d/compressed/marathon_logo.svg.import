@@ -2,21 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d1o5iavmu57qq"
-path.s3tc="res://.godot/imported/icon.svg-6ae0cb550f1ca3009d10a9bf3776e413.s3tc.ctex"
+uid="uid://bce3dopfwohyt"
+path="res://.godot/imported/marathon_logo.svg-4e774fe6e88ce4b3626477c88e1ac839.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
 }
 
 [deps]
 
-source_file="res://texture/2d/compressed/icon.svg"
-dest_files=["res://.godot/imported/icon.svg-6ae0cb550f1ca3009d10a9bf3776e413.s3tc.ctex"]
+source_file="res://texture/2d/compressed/marathon_logo.svg"
+dest_files=["res://.godot/imported/marathon_logo.svg-4e774fe6e88ce4b3626477c88e1ac839.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/uastc_level=0
@@ -38,7 +37,7 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=0
+detect_3d/compress_to=1
 svg/scale=1.0
 editor/scale_with_editor_scale=false
 editor/convert_colors_with_editor_theme=false

@@ -5,6 +5,7 @@
 [ext_resource type="Script" uid="uid://c5belsintpoms" path="res://script/object/node/canvas_item/2d/arc.gd" id="3_bl2nu"]
 
 [node name="RetMachinegun" type="Control"]
+custom_minimum_size = Vector2(64, 64)
 layout_mode = 3
 anchors_preset = 8
 anchor_left = 0.5
@@ -16,11 +17,15 @@ grow_vertical = 2
 
 [node name="Multiline2D" type="Node2D" parent="."]
 self_modulate = Color(1, 1, 1, 0.5019608)
+use_parent_material = true
+position = Vector2(32, 32)
 script = ExtResource("2_bl2nu")
 points = PackedVector2Array(19, 0, 30, 0, 0, 19, 0, 30, -19, 0, -30, 0, 0, -19, 0, -30)
 width = 2.0
 
 [node name="Circle2D" type="Node2D" parent="."]
+use_parent_material = true
+position = Vector2(32, 32)
 script = ExtResource("1_g1f7x")
 radius = 10.0
 filled = false
@@ -28,6 +33,8 @@ width = 2.0
 metadata/_custom_type_script = "uid://bdvrw4jmfxatd"
 
 [node name="Arc2D" type="Node2D" parent="."]
+use_parent_material = true
+position = Vector2(32, 32)
 script = ExtResource("3_bl2nu")
 radius = 31.0
 start_angle = -0.2617993877991494
@@ -37,6 +44,8 @@ width = 2.0
 metadata/_custom_type_script = "uid://c5belsintpoms"
 
 [node name="Arc2D2" type="Node2D" parent="."]
+use_parent_material = true
+position = Vector2(32, 32)
 rotation = 1.5707964
 script = ExtResource("3_bl2nu")
 radius = 31.0
@@ -47,6 +56,8 @@ width = 2.0
 metadata/_custom_type_script = "uid://c5belsintpoms"
 
 [node name="Arc2D3" type="Node2D" parent="."]
+use_parent_material = true
+position = Vector2(32, 32)
 rotation = 3.1415927
 script = ExtResource("3_bl2nu")
 radius = 31.0
@@ -57,6 +68,8 @@ width = 2.0
 metadata/_custom_type_script = "uid://c5belsintpoms"
 
 [node name="Arc2D4" type="Node2D" parent="."]
+use_parent_material = true
+position = Vector2(32, 32)
 rotation = 4.712389
 script = ExtResource("3_bl2nu")
 radius = 31.0

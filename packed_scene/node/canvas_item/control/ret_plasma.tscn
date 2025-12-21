@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://dlmnl7a36ussr"]
 
-[ext_resource type="Material" uid="uid://vft2418maqcq" path="res://material/shader/canvas_item/hole.tres" id="1_0skhv"]
+[ext_resource type="Material" uid="uid://vft2418maqcq" path="res://material/shader/canvas_item/screen.tres" id="1_0skhv"]
 [ext_resource type="StyleBox" uid="uid://dxndnglg0hmst" path="res://style_box/flat/ret_plasma_8.tres" id="1_3fjmd"]
 [ext_resource type="Texture2D" uid="uid://b6kxy56gse0vm" path="res://texture/2d/gradient/2d/ret_plasma.tres" id="2_kvhi2"]
 [ext_resource type="StyleBox" uid="uid://dtu337yj1ts7q" path="res://style_box/flat/ret_plasma_6.tres" id="4_b20eq"]
@@ -17,9 +17,12 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="BackBufferCopy" type="BackBufferCopy" parent="."]
+position = Vector2(32, 32)
 copy_mode = 2
+rect = Rect2(-32, -32, 64, 64)
 
 [node name="Panel" type="Panel" parent="."]
+use_parent_material = true
 custom_minimum_size = Vector2(34, 34)
 layout_mode = 1
 anchors_preset = 8
@@ -85,7 +88,8 @@ layout_mode = 2
 theme_override_styles/panel = ExtResource("4_b20eq")
 
 [node name="ReferenceRect" type="ReferenceRect" parent="."]
-custom_minimum_size = Vector2(12, 12)
+use_parent_material = true
+custom_minimum_size = Vector2(11, 11)
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -100,6 +104,7 @@ grow_horizontal = 2
 grow_vertical = 2
 border_color = Color(1, 1, 1, 0.5019608)
 border_width = 2.0
+editor_only = false
 
 [node name="MarginContainer" type="MarginContainer" parent="ReferenceRect"]
 layout_mode = 1

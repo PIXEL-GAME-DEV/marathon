@@ -19,6 +19,7 @@ copy_mode = 2
 
 [node name="Circle2D" type="Node2D" parent="."]
 self_modulate = Color(1, 1, 1, 0.5019608)
+use_parent_material = true
 position = Vector2(32, 32)
 script = ExtResource("2_yacgv")
 radius = 18.0
@@ -27,13 +28,16 @@ width = 2.0
 metadata/_custom_type_script = "uid://bdvrw4jmfxatd"
 
 [node name="RetFlameArrow" parent="." instance=ExtResource("2_tgn3c")]
+use_parent_material = true
 layout_mode = 1
 rotation = -0.5235988
 
 [node name="RetFlameArrow2" parent="." instance=ExtResource("2_tgn3c")]
+use_parent_material = true
 layout_mode = 1
 rotation = 1.5707964
 
 [node name="RetFlameArrow3" parent="." instance=ExtResource("2_tgn3c")]
+use_parent_material = true
 layout_mode = 1
 rotation = 3.6651914
