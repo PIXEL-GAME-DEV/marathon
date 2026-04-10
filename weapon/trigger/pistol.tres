@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Trigger" load_steps=4 format=3 uid="uid://b2jgx4ytkaj81"]
+
+[ext_resource type="Resource" uid="uid://bmss22ihe5o22" path="res://weapon/projectile/pistol_bullet.tres" id="1_inj6i"]
+[ext_resource type="Script" uid="uid://bxtqllwunjfv6" path="res://script/object/ref_counted/resource/trigger.gd" id="1_pf5ct"]
+[ext_resource type="AudioStream" uid="uid://orq02u0jt7p6" path="res://audio/stream/random/weapon/magnum_firing.tres" id="3_0tweb"]
+
+[resource]
+script = ExtResource("1_pf5ct")
+projectile = ExtResource("1_inj6i")
+time_round = 0.666
+error = 0.008726646259971648
+offset = Vector3(0, -0.01, 0)
+sound_firing = ExtResource("3_0tweb")
+metadata/_custom_type_script = "uid://bxtqllwunjfv6"

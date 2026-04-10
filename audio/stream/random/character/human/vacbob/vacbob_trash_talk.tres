@@ -1,0 +1,15 @@
+[gd_resource type="AudioStreamRandomizer" load_steps=6 format=3 uid="uid://cktof6ao4nku8"]
+
+[ext_resource type="AudioStream" uid="uid://c0j6mufuyjfoe" path="res://audio/stream/wav/character/human/vacbob/trash_talk/vacbob_trash_talk_0.wav" id="1_iq01i"]
+[ext_resource type="AudioStream" uid="uid://dmbyi5g42744d" path="res://audio/stream/wav/character/human/vacbob/trash_talk/vacbob_trash_talk_1.wav" id="2_t5uc4"]
+[ext_resource type="AudioStream" uid="uid://fti5crqsw20f" path="res://audio/stream/wav/character/human/vacbob/trash_talk/vacbob_trash_talk_2.wav" id="3_e1c76"]
+[ext_resource type="AudioStream" uid="uid://bxrearohm7cdv" path="res://audio/stream/wav/character/human/vacbob/trash_talk/vacbob_trash_talk_3.wav" id="4_33tml"]
+[ext_resource type="AudioStream" uid="uid://dqno48kgt734c" path="res://audio/stream/wav/character/human/vacbob/trash_talk/vacbob_trash_talk_4.wav" id="5_bfwu1"]
+
+[resource]
+streams_count = 5
+stream_0/stream = ExtResource("1_iq01i")
+stream_1/stream = ExtResource("2_t5uc4")
+stream_2/stream = ExtResource("3_e1c76")
+stream_3/stream = ExtResource("4_33tml")
+stream_4/stream = ExtResource("5_bfwu1")

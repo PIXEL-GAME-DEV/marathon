@@ -1,0 +1,10 @@
+[gd_resource type="AudioStreamRandomizer" load_steps=3 format=3 uid="uid://0nicyq8hk378"]
+
+[ext_resource type="AudioStream" uid="uid://bge5waelg4wa0" path="res://audio/stream/wav/character/alien/tick/flapping/tick_flapping_0.wav" id="1_1bxcu"]
+[ext_resource type="AudioStream" uid="uid://ust4nj6i2jy1" path="res://audio/stream/wav/character/alien/tick/flapping/tick_flapping_1.wav" id="2_45vky"]
+
+[resource]
+playback_mode = 1
+streams_count = 2
+stream_0/stream = ExtResource("1_1bxcu")
+stream_1/stream = ExtResource("2_45vky")

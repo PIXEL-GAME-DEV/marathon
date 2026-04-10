@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Weapon" load_steps=5 format=3 uid="uid://dr2q48o1nibwt"]
+
+[ext_resource type="PackedScene" uid="uid://n4o5be2n2xoj" path="res://packed_scene/node/canvas_item/control/reticles/ret_assault_rifle.tscn" id="1_auley"]
+[ext_resource type="Script" uid="uid://baaaql84npw2r" path="res://script/object/ref_counted/resource/weapon.gd" id="2_fxrsf"]
+[ext_resource type="Resource" uid="uid://dxond7xq4m1hs" path="res://weapon/trigger/assault_rifle.tres" id="3_jva8a"]
+[ext_resource type="Resource" uid="uid://cbshsjvn3t3gn" path="res://weapon/trigger/grenade.tres" id="4_c1khp"]
+
+[resource]
+script = ExtResource("2_fxrsf")
+name = "AR"
+name_long = "AR"
+reticle = ExtResource("1_auley")
+dual_wield = false
+fires_in_liquid = false
+fires_in_vacuum = false
+trigger_main = ExtResource("3_jva8a")
+trigger_secondary = ExtResource("4_c1khp")
+metadata/_custom_type_script = "uid://baaaql84npw2r"

@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="ProjectileResource" load_steps=6 format=3 uid="uid://vkbgywqniiu1"]
+
+[ext_resource type="Resource" uid="uid://5o5u3y6mmr51" path="res://weapon/projectile/ballistics/punch.tres" id="1_pubww"]
+[ext_resource type="Shape3D" uid="uid://csif72n7fla6m" path="res://shape/3d/sphere/sphere_r025.tres" id="2_6iprs"]
+[ext_resource type="Resource" uid="uid://cpbimx3rxhmjr" path="res://weapon/damage/punch.tres" id="2_no7ea"]
+[ext_resource type="Script" uid="uid://dewtggflv4fiq" path="res://script/object/ref_counted/projectile.gd" id="3_vsxem"]
+[ext_resource type="Resource" uid="uid://b3exvt46bl0dw" path="res://weapon/detonation/punch_hit.tres" id="3_ynmf5"]
+
+[resource]
+script = ExtResource("3_vsxem")
+shape = ExtResource("2_6iprs")
+damage = ExtResource("2_no7ea")
+detonation = ExtResource("3_ynmf5")
+ballistics = ExtResource("1_pubww")
+metadata/_custom_type_script = "uid://dewtggflv4fiq"

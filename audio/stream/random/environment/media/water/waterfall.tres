@@ -1,0 +1,10 @@
+[gd_resource type="AudioStreamRandomizer" load_steps=3 format=3 uid="uid://n75qjtyq2ak6"]
+
+[ext_resource type="AudioStream" uid="uid://dacadv4s0fc28" path="res://audio/stream/wav/environment/media/water/waterfall/waterfall_0.wav" id="1_0lsn4"]
+[ext_resource type="AudioStream" uid="uid://dtn4mw4g0dejj" path="res://audio/stream/wav/environment/media/water/waterfall/waterfall_1.wav" id="2_i7k6c"]
+
+[resource]
+playback_mode = 1
+streams_count = 2
+stream_0/stream = ExtResource("1_0lsn4")
+stream_1/stream = ExtResource("2_i7k6c")

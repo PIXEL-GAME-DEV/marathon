@@ -1,0 +1,43 @@
+[gd_scene load_steps=2 format=3 uid="uid://delj2pq18sr36"]
+
+[ext_resource type="Script" uid="uid://bdvrw4jmfxatd" path="res://script/object/node/canvas_item/2d/circle.gd" id="1_j6x2u"]
+
+[node name="RetAlien" type="Control"]
+modulate = Color(1, 0, 0, 1)
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -32.0
+offset_top = -32.0
+offset_right = 32.0
+offset_bottom = 32.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_behavior_recursive = 1
+
+[node name="Circle2D" type="Node2D" parent="."]
+self_modulate = Color(1, 1, 1, 0.8)
+use_parent_material = true
+position = Vector2(32, 19)
+script = ExtResource("1_j6x2u")
+radius = 4.0
+
+[node name="Circle2D2" type="Node2D" parent="."]
+self_modulate = Color(1, 1, 1, 0.8)
+use_parent_material = true
+position = Vector2(20, 40)
+script = ExtResource("1_j6x2u")
+radius = 4.0
+width = 1.0
+
+[node name="Circle2D3" type="Node2D" parent="."]
+self_modulate = Color(1, 1, 1, 0.8)
+use_parent_material = true
+position = Vector2(44, 40)
+script = ExtResource("1_j6x2u")
+radius = 4.0
+width = 1.0

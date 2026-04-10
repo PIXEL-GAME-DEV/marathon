@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="ProjectileResource" load_steps=6 format=3 uid="uid://br4ijpxnabe3p"]
+
+[ext_resource type="Resource" uid="uid://foh4hk64h3f0" path="res://weapon/projectile/ballistics/projectile.tres" id="1_63t82"]
+[ext_resource type="Resource" uid="uid://cmdk7ehym4lrq" path="res://weapon/damage/assault_rifle.tres" id="2_iew0i"]
+[ext_resource type="Resource" uid="uid://bvuudl5ynu0at" path="res://weapon/detonation/bullet_ricochet.tres" id="3_e7adt"]
+[ext_resource type="Script" uid="uid://dewtggflv4fiq" path="res://script/object/ref_counted/projectile.gd" id="5_ehgtu"]
+[ext_resource type="Shape3D" uid="uid://b4rmdc3vtdx5n" path="res://shape/3d/sphere/point.tres" id="6_87ldb"]
+
+[resource]
+script = ExtResource("5_ehgtu")
+shape = ExtResource("6_87ldb")
+damage = ExtResource("2_iew0i")
+detonation = ExtResource("3_e7adt")
+ballistics = ExtResource("1_63t82")
+metadata/_custom_type_script = "uid://dewtggflv4fiq"

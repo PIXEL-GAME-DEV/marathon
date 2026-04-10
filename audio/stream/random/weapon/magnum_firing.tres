@@ -1,0 +1,10 @@
+[gd_resource type="AudioStreamRandomizer" load_steps=3 format=3 uid="uid://orq02u0jt7p6"]
+
+[ext_resource type="AudioStream" uid="uid://d1iurefob8ufm" path="res://audio/stream/wav/weapon/magnum/firing/magnum_firing_0.wav" id="1_q088t"]
+[ext_resource type="AudioStream" uid="uid://c3pf3y1r47ybs" path="res://audio/stream/wav/weapon/magnum/firing/magnum_firing_1.wav" id="2_pu16f"]
+
+[resource]
+playback_mode = 1
+streams_count = 2
+stream_0/stream = ExtResource("1_q088t")
+stream_1/stream = ExtResource("2_pu16f")

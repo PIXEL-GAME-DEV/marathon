@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Detonation" load_steps=3 format=3 uid="uid://bvuudl5ynu0at"]
+
+[ext_resource type="PackedScene" uid="uid://uq1p4jvm0e6q" path="res://packed_scene/node/3d/bullet_ricochet.tscn" id="1_wf01a"]
+[ext_resource type="Script" uid="uid://muolx6s4gyrx" path="res://script/object/ref_counted/resource/detonation.gd" id="2_pijvq"]
+
+[resource]
+script = ExtResource("2_pijvq")
+effect = ExtResource("1_wf01a")
+metadata/_custom_type_script = "uid://muolx6s4gyrx"

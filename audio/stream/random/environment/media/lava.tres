@@ -1,0 +1,12 @@
+[gd_resource type="AudioStreamRandomizer" load_steps=4 format=3 uid="uid://b651vycwokqr7"]
+
+[ext_resource type="AudioStream" uid="uid://c5qr5d1ledmou" path="res://audio/stream/wav/environment/media/lava/lava_0.wav" id="1_xqx6f"]
+[ext_resource type="AudioStream" uid="uid://bv0xxlawuvvhh" path="res://audio/stream/wav/environment/media/lava/lava_1.wav" id="2_rhuuv"]
+[ext_resource type="AudioStream" uid="uid://dyi2qaxqi8j8a" path="res://audio/stream/wav/environment/media/lava/lava_2.wav" id="3_bfnmi"]
+
+[resource]
+playback_mode = 1
+streams_count = 3
+stream_0/stream = ExtResource("1_xqx6f")
+stream_1/stream = ExtResource("2_rhuuv")
+stream_2/stream = ExtResource("3_bfnmi")

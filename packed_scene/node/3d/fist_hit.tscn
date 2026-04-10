@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://bh87sc78mey83"]
+
+[ext_resource type="AudioStream" uid="uid://g5ewuo5nng5q" path="res://audio/stream/wav/weapon/fist_hitting.wav" id="1_5uagn"]
+[ext_resource type="Script" uid="uid://b8aoycw6a0brg" path="res://script/object/node/3d/audio/stream_player/free.gd" id="3_admrw"]
+
+[node name="FistHit" type="AudioStreamPlayer3D"]
+stream = ExtResource("1_5uagn")
+attenuation_model = 2
+autoplay = true
+script = ExtResource("3_admrw")

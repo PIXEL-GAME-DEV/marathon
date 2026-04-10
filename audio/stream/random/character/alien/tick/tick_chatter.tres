@@ -1,0 +1,10 @@
+[gd_resource type="AudioStreamRandomizer" load_steps=3 format=3 uid="uid://x40xtxftwbbn"]
+
+[ext_resource type="AudioStream" uid="uid://be0jm17e1mant" path="res://audio/stream/wav/character/alien/tick/chatter/tick_chatter_0.wav" id="1_kkt6p"]
+[ext_resource type="AudioStream" uid="uid://d0swve7tceh70" path="res://audio/stream/wav/character/alien/tick/chatter/tick_chatter_1.wav" id="2_420nl"]
+
+[resource]
+playback_mode = 1
+streams_count = 2
+stream_0/stream = ExtResource("1_kkt6p")
+stream_1/stream = ExtResource("2_420nl")

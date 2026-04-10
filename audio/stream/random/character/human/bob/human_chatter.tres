@@ -1,0 +1,13 @@
+[gd_resource type="AudioStreamRandomizer" load_steps=5 format=3 uid="uid://bqiw8s8s4jx4v"]
+
+[ext_resource type="AudioStream" uid="uid://cxc6lh6w4wupi" path="res://audio/stream/wav/character/human/bob/chatter/human_chatter_0.wav" id="1_wtnom"]
+[ext_resource type="AudioStream" uid="uid://chuu1orlkgv8f" path="res://audio/stream/wav/character/human/bob/chatter/human_chatter_1.wav" id="2_01vp0"]
+[ext_resource type="AudioStream" uid="uid://c41d1u5u6famp" path="res://audio/stream/wav/character/human/bob/chatter/human_chatter_2.wav" id="3_1rs1e"]
+[ext_resource type="AudioStream" uid="uid://cs5cp2q4nqc1b" path="res://audio/stream/wav/character/human/bob/chatter/human_chatter_3.wav" id="4_sxefa"]
+
+[resource]
+streams_count = 4
+stream_0/stream = ExtResource("1_wtnom")
+stream_1/stream = ExtResource("2_01vp0")
+stream_2/stream = ExtResource("3_1rs1e")
+stream_3/stream = ExtResource("4_sxefa")

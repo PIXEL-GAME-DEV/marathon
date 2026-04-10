@@ -1,0 +1,33 @@
+[gd_scene load_steps=4 format=3 uid="uid://qa4rwfvd227v"]
+
+[ext_resource type="FontVariation" uid="uid://c7ywrc14suylp" path="res://font/variation/roboto_condensed/roboto_condensed_thin.tres" id="1_dckxa"]
+[ext_resource type="FontFile" uid="uid://b1e1ln1xcquhb" path="res://font/file/lilita_one/lilita_one_regular.ttf" id="2_88047"]
+[ext_resource type="Texture2D" uid="uid://dgci3pnl6ai2v" path="res://texture/2d/compressed/icon_monochrome_dark.svg" id="3_g3kc7"]
+
+[node name="PoweredByGodot" type="HBoxContainer"]
+custom_minimum_size = Vector2(128, 0)
+offset_right = 128.0
+offset_bottom = 48.0
+theme_override_constants/separation = 0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_override_fonts/normal_font = ExtResource("1_dckxa")
+theme_override_fonts/bold_font = ExtResource("2_88047")
+theme_override_font_sizes/bold_font_size = 24
+bbcode_enabled = true
+text = "Powered by
+[b]GODOT[/b]"
+fit_content = true
+scroll_active = false
+
+[node name="TextureRect" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("3_g3kc7")
+expand_mode = 1
+stretch_mode = 5

@@ -1,0 +1,7 @@
+[gd_resource type="FontVariation" load_steps=2 format=3 uid="uid://dwe65o3wjfyb3"]
+
+[ext_resource type="FontFile" uid="uid://bxkj54ra3b5d7" path="res://font/file/marapfhont.ttf" id="1_7cf62"]
+
+[resource]
+base_font = ExtResource("1_7cf62")
+spacing_space = 48

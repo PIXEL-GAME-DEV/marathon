@@ -1,0 +1,10 @@
+[gd_resource type="AudioStreamRandomizer" load_steps=3 format=3 uid="uid://ccu1bkcc4na2"]
+
+[ext_resource type="AudioStream" uid="uid://dcc7ti4dviudk" path="res://audio/stream/wav/character/alien/f'lickta/melee_attack/hit/f'lickta_melee_attack_hit_0.wav" id="1_u30uc"]
+[ext_resource type="AudioStream" uid="uid://2pd3vyuvv2oy" path="res://audio/stream/wav/character/alien/f'lickta/melee_attack/hit/f'lickta_melee_attack_hit_1.wav" id="2_6tre2"]
+
+[resource]
+playback_mode = 1
+streams_count = 2
+stream_0/stream = ExtResource("1_u30uc")
+stream_1/stream = ExtResource("2_6tre2")

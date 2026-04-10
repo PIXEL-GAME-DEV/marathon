@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Trigger" load_steps=5 format=3 uid="uid://cbshsjvn3t3gn"]
+
+[ext_resource type="Resource" uid="uid://c8shfula2m2ut" path="res://weapon/projectile/grenade.tres" id="1_57pg2"]
+[ext_resource type="Script" uid="uid://bxtqllwunjfv6" path="res://script/object/ref_counted/resource/trigger.gd" id="1_vikfd"]
+[ext_resource type="AudioStream" uid="uid://buhopn1vutq2e" path="res://audio/stream/wav/weapon/empty_gun.wav" id="3_c34nn"]
+[ext_resource type="AudioStream" uid="uid://6fh6ofp3ogt7" path="res://audio/stream/wav/weapon/grenade/grenade_launcher_firing.wav" id="4_emcjq"]
+
+[resource]
+script = ExtResource("1_vikfd")
+projectile = ExtResource("1_57pg2")
+rounds_per_magazine = 7
+time_round = 0.167
+recoil_magnitude = 40.0
+offset = Vector3(0, -0.285, 0)
+sound_firing = ExtResource("4_emcjq")
+sound_click = ExtResource("3_c34nn")
+metadata/_custom_type_script = "uid://bxtqllwunjfv6"

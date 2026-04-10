@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="Ballistics" load_steps=2 format=3 uid="uid://5o5u3y6mmr51"]
+
+[ext_resource type="Script" uid="uid://bgfxvcmsxv4uq" path="res://script/object/ref_counted/resource/ballistics.gd" id="1_y6a33"]
+
+[resource]
+script = ExtResource("1_y6a33")
+metadata/_custom_type_script = "uid://bgfxvcmsxv4uq"

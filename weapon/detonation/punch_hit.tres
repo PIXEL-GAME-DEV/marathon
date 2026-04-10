@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Detonation" load_steps=3 format=3 uid="uid://b3exvt46bl0dw"]
+
+[ext_resource type="PackedScene" uid="uid://bh87sc78mey83" path="res://packed_scene/node/3d/fist_hit.tscn" id="1_o31o6"]
+[ext_resource type="Script" uid="uid://muolx6s4gyrx" path="res://script/object/ref_counted/resource/detonation.gd" id="2_fcoas"]
+
+[resource]
+script = ExtResource("2_fcoas")
+effect = ExtResource("1_o31o6")
+metadata/_custom_type_script = "uid://muolx6s4gyrx"

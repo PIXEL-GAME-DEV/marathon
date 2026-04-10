@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Terminal" load_steps=4 format=3 uid="uid://orh7x21qvibq"]
+
+[ext_resource type="Script" uid="uid://dv81854wsvdwa" path="res://script/object/ref_counted/resource/terminal.gd" id="1_upwrv"]
+[ext_resource type="Script" uid="uid://buxc605bhppg7" path="res://script/object/ref_counted/resource/terminal_page.gd" id="1_vpvo0"]
+[ext_resource type="Resource" uid="uid://cpcse0fgob5xb" path="res://terminals/m1/l0/t1/m1_l0_t1_p1.tres" id="2_vctfh"]
+
+[resource]
+script = ExtResource("1_upwrv")
+pages = Array[ExtResource("1_vpvo0")]([ExtResource("2_vctfh"), null])
+metadata/_custom_type_script = "uid://dv81854wsvdwa"

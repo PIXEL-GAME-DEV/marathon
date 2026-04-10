@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Weapon" load_steps=4 format=3 uid="uid://deivpuqyro5uc"]
+
+[ext_resource type="PackedScene" uid="uid://863uq1iokyt7" path="res://packed_scene/node/canvas_item/control/reticles/ret_pistol.tscn" id="1_sq6xy"]
+[ext_resource type="Script" uid="uid://baaaql84npw2r" path="res://script/object/ref_counted/resource/weapon.gd" id="1_x6r3u"]
+[ext_resource type="Resource" uid="uid://b2jgx4ytkaj81" path="res://weapon/trigger/pistol.tres" id="3_x6r3u"]
+
+[resource]
+script = ExtResource("1_x6r3u")
+name = "pistol"
+name_long = "pistol"
+reticle = ExtResource("1_sq6xy")
+fires_in_liquid = false
+fires_in_vacuum = false
+trigger_main = ExtResource("3_x6r3u")
+metadata/_custom_type_script = "uid://baaaql84npw2r"

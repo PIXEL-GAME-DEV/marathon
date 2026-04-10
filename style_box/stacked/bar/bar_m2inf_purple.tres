@@ -1,0 +1,59 @@
+[gd_resource type="StyleBox" script_class="StyleBoxStacked" format=3 uid="uid://ce82dcg7ubw41"]
+
+[ext_resource type="Script" uid="uid://c5j1egx2237sg" path="res://script/object/ref_counted/resource/style_box/style_box_stacked.gd" id="1_2jj3q"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5i57r"]
+bg_color = Color(0.2509804, 0.1254902, 0.5019608, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+corner_detail = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ysdsq"]
+bg_color = Color(1, 1, 1, 1)
+draw_center = false
+border_width_top = 6
+border_color = Color(1, 1, 1, 0.5019608)
+border_blend = true
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+corner_detail = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_emr7j"]
+bg_color = Color(1, 1, 1, 1)
+draw_center = false
+border_width_left = 6
+border_width_right = 6
+border_color = Color(1, 1, 1, 0.2509804)
+border_blend = true
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+corner_detail = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rdil6"]
+bg_color = Color(0, 0, 0, 1)
+draw_center = false
+border_width_bottom = 8
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+corner_detail = 20
+
+[resource]
+resource_local_to_scene = false
+resource_name = ""
+content_margin_left = -1.0
+content_margin_top = -1.0
+content_margin_right = -1.0
+content_margin_bottom = -1.0
+script = ExtResource("1_2jj3q")
+style_boxes = Array[StyleBox]([SubResource("StyleBoxFlat_5i57r"), SubResource("StyleBoxFlat_ysdsq"), SubResource("StyleBoxFlat_emr7j"), SubResource("StyleBoxFlat_rdil6")])
+metadata/_custom_type_script = "uid://c5j1egx2237sg"

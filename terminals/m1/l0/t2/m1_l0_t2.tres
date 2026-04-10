@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="Terminal" load_steps=3 format=3 uid="uid://scnbnkflegb2"]
+
+[ext_resource type="Script" uid="uid://buxc605bhppg7" path="res://script/object/ref_counted/resource/terminal_page.gd" id="1_hvpee"]
+[ext_resource type="Script" uid="uid://dv81854wsvdwa" path="res://script/object/ref_counted/resource/terminal.gd" id="2_vqfax"]
+
+[resource]
+script = ExtResource("2_vqfax")
+metadata/_custom_type_script = "uid://dv81854wsvdwa"

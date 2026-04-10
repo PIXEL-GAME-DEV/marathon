@@ -1,0 +1,13 @@
+[gd_resource type="AudioStreamRandomizer" load_steps=5 format=3 uid="uid://dop4dquffitgg"]
+
+[ext_resource type="AudioStream" uid="uid://66dhqdd0vpxl" path="res://audio/stream/wav/environment/media/water/drip/water_drip_0.wav" id="1_627v7"]
+[ext_resource type="AudioStream" uid="uid://yl4pan3rn4n4" path="res://audio/stream/wav/environment/media/water/drip/water_drip_1.wav" id="2_71l10"]
+[ext_resource type="AudioStream" uid="uid://cbgtupqv8i7nk" path="res://audio/stream/wav/environment/media/water/drip/water_drip_2.wav" id="3_e3b2p"]
+[ext_resource type="AudioStream" uid="uid://vuj60swgkh6x" path="res://audio/stream/wav/environment/media/water/drip/water_drip_3.wav" id="4_i2wxr"]
+
+[resource]
+streams_count = 4
+stream_0/stream = ExtResource("1_627v7")
+stream_1/stream = ExtResource("2_71l10")
+stream_2/stream = ExtResource("3_e3b2p")
+stream_3/stream = ExtResource("4_i2wxr")

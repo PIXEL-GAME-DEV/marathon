@@ -1,0 +1,15 @@
+[gd_resource type="AudioStreamRandomizer" load_steps=6 format=3 uid="uid://d05gjm2wkoyeh"]
+
+[ext_resource type="AudioStream" uid="uid://bicdkxyefftob" path="res://audio/stream/wav/character/human/bob/chatter/assimilated/assimilated_human_chatter_0.wav" id="1_q23dr"]
+[ext_resource type="AudioStream" uid="uid://c2djpwx5nlxhf" path="res://audio/stream/wav/character/human/bob/chatter/assimilated/assimilated_human_chatter_1.wav" id="2_lkr02"]
+[ext_resource type="AudioStream" uid="uid://wexyapmulo88" path="res://audio/stream/wav/character/human/bob/chatter/assimilated/assimilated_human_chatter_2.wav" id="3_vd6a4"]
+[ext_resource type="AudioStream" uid="uid://bxwncpod4xyqa" path="res://audio/stream/wav/character/human/bob/chatter/assimilated/assimilated_human_chatter_3.wav" id="4_mefdt"]
+[ext_resource type="AudioStream" uid="uid://btephclslg2ee" path="res://audio/stream/wav/character/human/bob/chatter/assimilated/assimilated_human_chatter_4.wav" id="5_x2ftu"]
+
+[resource]
+streams_count = 5
+stream_0/stream = ExtResource("1_q23dr")
+stream_1/stream = ExtResource("2_lkr02")
+stream_2/stream = ExtResource("3_vd6a4")
+stream_3/stream = ExtResource("4_mefdt")
+stream_4/stream = ExtResource("5_x2ftu")

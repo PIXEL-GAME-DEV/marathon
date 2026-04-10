@@ -1,8 +1,10 @@
 [gd_resource type="SystemFont" format=3 uid="uid://r7odcmh8eyrl"]
 
 [resource]
-font_names = PackedStringArray("Courier Prime")
+font_names = PackedStringArray("Courier New", "Monospace")
 font_italic = true
 font_weight = 900
 generate_mipmaps = true
-multichannel_signed_distance_field = true
+force_autohinter = true
+hinting = 2
+subpixel_positioning = 0

@@ -1,60 +1,81 @@
-@tool
-class_name Arc2D
-extends Node2D
+@tool class_name Arc2D extends Node2D
 
 
-@export var radius: float = 50:
+enum CountEditMode {
+	POINTS,
+	LINES,
+}
+
+
+@export var improved := true:
 	set(value):
-		radius = value
+		improved = value
 		queue_redraw()
 
-@export_range(-360, 360, 0.01, "radians_as_degrees") var start_angle: float = 0:
+@export_custom(PROPERTY_HINT_NONE, "suffix:px") var radius := 20.0:
+	set(value):
+		radius = clampf(value, 0, INF)
+		queue_redraw()
+
+@export_range(-360, 360, 0.01, "radians_as_degrees") var start_angle := 0.0:
 	set(value):
 		start_angle = value
 		queue_redraw()
 
-@export_range(-360, 360, 0.01, "radians_as_degrees") var end_angle: float = 360:
+@export_range(-360, 360, 0.01, "radians_as_degrees") var end_angle := 360.0:
 	set(value):
 		end_angle = value
 		queue_redraw()
 
-@export var point_count: int = 17:
+@export var count := 33:
 	set(value):
-		point_count = clampi(value, 3, 9223372036854775807)
+		match count_edit_mode:
+			CountEditMode.POINTS:
+				count = clampi(value, 2, 9223372036854775807)
+				_point_count = clampi(value, 2, 9223372036854775807)
+				_line_count = clampi(value - 1, 1,9223372036854775807)
+			CountEditMode.LINES:
+				count = clampi(value, 1, 9223372036854775807)
+				_point_count = clampi(value + 1, 2, 9223372036854775807)
+				_line_count = clampi(value, 1, 9223372036854775807)
 		queue_redraw()
 
-@export var width: float = -1:
+@export var count_edit_mode: CountEditMode:
+	set(value):
+		count_edit_mode = value
+		match value:
+			CountEditMode.POINTS:
+				count = _point_count
+			CountEditMode.LINES:
+				count = _line_count
+
+@export_custom(PROPERTY_HINT_NONE, "suffix:px") var width := 2.0:
 	set(value):
 		width = value
 		queue_redraw()
 
-@export var anti_aliased: bool = false:
+
+@export_group("Anti_aliasing", "anti_aliasing")
+@export_custom(PROPERTY_HINT_GROUP_ENABLE, "") var anti_aliasing := true:
 	set(value):
-		anti_aliased = value
+		anti_aliasing = value
 		queue_redraw()
 
-@export var anti_aliasing_size: float = 1:
+@export var anti_aliasing_size := 1.0:
 	set(value):
 		anti_aliasing_size = value
 		queue_redraw()
 
 
-func _ready() -> void:
-	queue_redraw()
+var _point_count := 33
+var _line_count := 32
 
 
 func _draw() -> void:
-	var aa: float = 1
-	if anti_aliased:
-		var scale_factor: float = 1
-		var window: Window = get_window()
-		if window: scale_factor = window.get_oversampling()
-		# Adjust AA feather size to account for the 2D scale factor,
-		# so that antialiasing doesn't become blurry at viewport resolutions
-		# higher than the default when using the `canvas_items` stretch mode
-		# (or when using `oversampling` values different than `1.0`).
-		aa = anti_aliasing_size / scale_factor
-		
-	draw_set_transform(Vector2.ZERO, 0, Vector2.ONE * aa)
-	draw_arc(Vector2.ZERO, radius / aa, start_angle, end_angle, point_count,
-			Color.WHITE, width / aa, anti_aliased)
+	if improved:
+		CanvasItemFuncs.draw_arc(self, Vector2.ZERO, radius, start_angle,
+				end_angle, _point_count, Color.WHITE, width, anti_aliasing,
+				anti_aliasing_size)
+	else:
+		draw_arc(Vector2.ZERO, radius, start_angle, end_angle, _point_count,
+				Color.WHITE, width, anti_aliasing)

@@ -1,17 +1,16 @@
-[gd_resource type="Theme" load_steps=7 format=3 uid="uid://b7o05wkprcpwl"]
+[gd_resource type="Theme" load_steps=6 format=3 uid="uid://b7o05wkprcpwl"]
 
 [ext_resource type="SystemFont" uid="uid://dovw1xb4xydrh" path="res://font/system/courier/courier.tres" id="1_hbri8"]
 [ext_resource type="SystemFont" uid="uid://c4mn8uh3x5xqx" path="res://font/system/courier/courier_bold.tres" id="2_us6w3"]
 [ext_resource type="SystemFont" uid="uid://r7odcmh8eyrl" path="res://font/system/courier/courier_bold_italic.tres" id="3_fhp3h"]
 [ext_resource type="SystemFont" uid="uid://da1ugyq4fsw53" path="res://font/system/courier/courier_italic.tres" id="4_s8jgg"]
-[ext_resource type="SystemFont" uid="uid://cn1cqmkkl71f8" path="res://font/system/courier/courier_mono.tres" id="5_2pqku"]
-[ext_resource type="StyleBox" uid="uid://c7qqf86cfscxh" path="res://style_box/flat/box_black.tres" id="6_us6w3"]
+[ext_resource type="StyleBox" uid="uid://c7qqf86cfscxh" path="res://style_box/flat/box/box_black.tres" id="6_us6w3"]
 
 [resource]
-Label/fonts/font = ExtResource("1_hbri8")
+default_font = ExtResource("1_hbri8")
 RichTextLabel/fonts/bold_font = ExtResource("2_us6w3")
 RichTextLabel/fonts/bold_italics_font = ExtResource("3_fhp3h")
 RichTextLabel/fonts/italics_font = ExtResource("4_s8jgg")
-RichTextLabel/fonts/mono_font = ExtResource("5_2pqku")
+RichTextLabel/fonts/mono_font = ExtResource("1_hbri8")
 RichTextLabel/fonts/normal_font = ExtResource("1_hbri8")
 RichTextLabel/styles/background = ExtResource("6_us6w3")

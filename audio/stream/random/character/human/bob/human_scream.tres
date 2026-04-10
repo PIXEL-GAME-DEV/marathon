@@ -1,0 +1,10 @@
+[gd_resource type="AudioStreamRandomizer" load_steps=3 format=3 uid="uid://dfpdxos4d5mea"]
+
+[ext_resource type="AudioStream" uid="uid://bboqvd30vxyw0" path="res://audio/stream/wav/character/human/bob/scream/human_scream_0.wav" id="1_8cfj3"]
+[ext_resource type="AudioStream" uid="uid://ct2ar1hyngal7" path="res://audio/stream/wav/character/human/bob/scream/human_scream_1.wav" id="2_dot6c"]
+
+[resource]
+playback_mode = 1
+streams_count = 2
+stream_0/stream = ExtResource("1_8cfj3")
+stream_1/stream = ExtResource("2_dot6c")

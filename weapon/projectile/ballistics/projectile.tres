@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Ballistics" load_steps=2 format=3 uid="uid://foh4hk64h3f0"]
+
+[ext_resource type="Script" uid="uid://bgfxvcmsxv4uq" path="res://script/object/ref_counted/resource/ballistics.gd" id="1_ckdic"]
+
+[resource]
+script = ExtResource("1_ckdic")
+speed = 120.0
+max_range = 0.0
+metadata/_custom_type_script = "uid://bgfxvcmsxv4uq"

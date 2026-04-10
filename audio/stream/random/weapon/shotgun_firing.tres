@@ -1,0 +1,10 @@
+[gd_resource type="AudioStreamRandomizer" load_steps=3 format=3 uid="uid://iyn438dt0cpp"]
+
+[ext_resource type="AudioStream" uid="uid://ce4mng85m6ocy" path="res://audio/stream/wav/weapon/shotgun/firing/shotgun_firing_0.wav" id="1_l26tc"]
+[ext_resource type="AudioStream" uid="uid://cue54jfuboaoh" path="res://audio/stream/wav/weapon/shotgun/firing/shotgun_firing_1.wav" id="2_70x0j"]
+
+[resource]
+playback_mode = 1
+streams_count = 2
+stream_0/stream = ExtResource("1_l26tc")
+stream_1/stream = ExtResource("2_70x0j")

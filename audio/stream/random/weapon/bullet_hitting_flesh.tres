@@ -1,0 +1,12 @@
+[gd_resource type="AudioStreamRandomizer" load_steps=4 format=3 uid="uid://bxa2clef8wq4b"]
+
+[ext_resource type="AudioStream" uid="uid://dc2s7auwro808" path="res://audio/stream/wav/weapon/bullet_hitting_flesh/bullet_hitting_flesh_0.wav" id="1_2evej"]
+[ext_resource type="AudioStream" uid="uid://c87tn2hj2dl36" path="res://audio/stream/wav/weapon/bullet_hitting_flesh/bullet_hitting_flesh_1.wav" id="2_adac2"]
+[ext_resource type="AudioStream" uid="uid://dji4wu04w1n6c" path="res://audio/stream/wav/weapon/bullet_hitting_flesh/bullet_hitting_flesh_2.wav" id="3_rqxlq"]
+
+[resource]
+playback_mode = 1
+streams_count = 3
+stream_0/stream = ExtResource("1_2evej")
+stream_1/stream = ExtResource("2_adac2")
+stream_2/stream = ExtResource("3_rqxlq")

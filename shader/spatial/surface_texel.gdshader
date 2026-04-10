@@ -1,14 +1,13 @@
 shader_type spatial;
+render_mode specular_disabled;
 #include "res://shader/include/uniform_group/albedo.gdshaderinc"
 #include "res://shader/include/uniform_group/uv/uv1.gdshaderinc"
-//#include "res://shader/include/uniform_group/uv/uv2.gdshaderinc"
 #include "res://shader/include/uniform_group/billboard.gdshaderinc"
 #include "res://shader/include/texture/texture_near_aa.gdshaderinc"
-#include "res://shader/include/texel_shadows.gdshaderinc"
+#include "res://shader/include/spatial/fragment/texel_shadows.gdshaderinc"
 
 void vertex() {
 	UV = UV * uv1_scale.xy + uv1_offset.xy;
-	//UV2 = UV2 * uv2_scale.xy + uv1_offset.xy;
 	MODELVIEW_MATRIX = billboard_MODELVIEW_MATRIX(MODELVIEW_MATRIX, VIEW_MATRIX, MAIN_CAM_INV_VIEW_MATRIX, MODEL_MATRIX);
 	MODELVIEW_NORMAL_MATRIX = mat3(MODELVIEW_MATRIX);
 }

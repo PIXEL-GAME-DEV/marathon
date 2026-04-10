@@ -1,0 +1,88 @@
+[gd_scene load_steps=12 format=3 uid="uid://befr8ydcpvuhm"]
+
+[ext_resource type="Shader" uid="uid://df3txudpkw5th" path="res://shader/canvas_item/aa_test.gdshader" id="1_x2id1"]
+[ext_resource type="Script" uid="uid://c40rxkufutmua" path="res://script/object/node/canvas_item/2d/rect.gd" id="2_f1cva"]
+[ext_resource type="Script" uid="uid://c5belsintpoms" path="res://script/object/node/canvas_item/2d/arc.gd" id="3_8jopi"]
+[ext_resource type="Script" uid="uid://bdvrw4jmfxatd" path="res://script/object/node/canvas_item/2d/circle.gd" id="4_nuj6u"]
+[ext_resource type="Script" uid="uid://ccok5yln2jwe4" path="res://script/object/node/canvas_item/2d/dashed_line.gd" id="5_77c5n"]
+[ext_resource type="Script" uid="uid://chwo48tgf0h0b" path="res://script/object/node/canvas_item/2d/line.gd" id="6_2ovfp"]
+[ext_resource type="Script" uid="uid://bcm8ubq8g3ur8" path="res://script/object/node/canvas_item/2d/multiline.gd" id="7_56h7o"]
+[ext_resource type="Script" uid="uid://c4lqf4q84h1y7" path="res://script/object/node/canvas_item/2d/multiline_colors.gd" id="8_i7f7s"]
+[ext_resource type="Script" uid="uid://bnwyw5y5fuot4" path="res://script/object/node/canvas_item/2d/polyline.gd" id="9_rjfqr"]
+[ext_resource type="Script" uid="uid://b7oldwqd18mq3" path="res://script/object/node/canvas_item/2d/polyline_colors.gd" id="10_mrqhf"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ealfq"]
+shader = ExtResource("1_x2id1")
+shader_parameter/p = 1.0
+
+[node name="DrawTest" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="Rect2D" type="Control" parent="."]
+material = SubResource("ShaderMaterial_ealfq")
+anchors_preset = 0
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 60.0
+offset_bottom = 60.0
+script = ExtResource("2_f1cva")
+metadata/_custom_type_script = "uid://c40rxkufutmua"
+
+[node name="Arc2D" type="Node2D" parent="Rect2D"]
+position = Vector2(64, 20)
+script = ExtResource("3_8jopi")
+radius = 20.0
+end_angle = 3.141592653589793
+count = 62
+count_edit_mode = 1
+metadata/_custom_type_script = "uid://c5belsintpoms"
+
+[node name="Circle2D" type="Node2D" parent="Rect2D/Arc2D"]
+position = Vector2(44, 0)
+script = ExtResource("4_nuj6u")
+radius = 20.0
+metadata/_custom_type_script = "uid://bdvrw4jmfxatd"
+
+[node name="DashedLine2D" type="Node2D" parent="Rect2D/Arc2D/Circle2D"]
+position = Vector2(44, 0)
+script = ExtResource("5_77c5n")
+from = Vector2(-20, 0)
+to = Vector2(20, 0)
+dash = 3.0
+metadata/_custom_type_script = "uid://ccok5yln2jwe4"
+
+[node name="Line2DPlus" type="Node2D" parent="Rect2D/Arc2D/Circle2D/DashedLine2D"]
+position = Vector2(44, 0)
+script = ExtResource("6_2ovfp")
+from = Vector2(-20, 0)
+to = Vector2(20, 0)
+metadata/_custom_type_script = "uid://chwo48tgf0h0b"
+
+[node name="Multiline2D" type="Node2D" parent="Rect2D/Arc2D/Circle2D/DashedLine2D/Line2DPlus"]
+position = Vector2(44, 0)
+script = ExtResource("7_56h7o")
+points = PackedVector2Array(-16, -16, 16, 16)
+metadata/_custom_type_script = "uid://bcm8ubq8g3ur8"
+
+[node name="MultilineColors2D" type="Node2D" parent="Rect2D/Arc2D/Circle2D/DashedLine2D/Line2DPlus/Multiline2D"]
+position = Vector2(44, 0)
+script = ExtResource("8_i7f7s")
+points = PackedVector2Array(-16, -16, 16, 16)
+colors = PackedColorArray(1, 1, 1, 1)
+width = 2.0
+metadata/_custom_type_script = "uid://c4lqf4q84h1y7"
+
+[node name="Polyline2D" type="Node2D" parent="Rect2D/Arc2D/Circle2D/DashedLine2D/Line2DPlus/Multiline2D/MultilineColors2D"]
+position = Vector2(44, 0)
+script = ExtResource("9_rjfqr")
+points = PackedVector2Array(-20, 0, 20, 0)
+metadata/_custom_type_script = "uid://bnwyw5y5fuot4"
+
+[node name="PolylineColors2D" type="Node2D" parent="Rect2D/Arc2D/Circle2D/DashedLine2D/Line2DPlus/Multiline2D/MultilineColors2D/Polyline2D"]
+position = Vector2(44, 0)
+script = ExtResource("10_mrqhf")
+points = PackedVector2Array(-16, -16, 16, 16)
+colors = PackedColorArray(1, 1, 1, 1)
+width = 1.0
+metadata/_custom_type_script = "uid://b7oldwqd18mq3"

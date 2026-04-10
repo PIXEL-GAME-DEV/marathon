@@ -1,0 +1,112 @@
+[gd_scene load_steps=4 format=3 uid="uid://boy6on1oxesak"]
+
+[ext_resource type="StyleBox" uid="uid://3qgfrosfngxy" path="res://style_box/flat/ret_smg/ret_smg_lines.tres" id="1_r7w2q"]
+[ext_resource type="Material" uid="uid://vft2418maqcq" path="res://material/shader/canvas_item/screen.tres" id="2_r7w2q"]
+[ext_resource type="Script" uid="uid://c40rxkufutmua" path="res://script/object/node/canvas_item/2d/rect.gd" id="3_3o6pf"]
+
+[node name="RetSMG" type="Control"]
+modulate = Color(0.5019608, 1, 0, 1)
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+mouse_behavior_recursive = 1
+
+[node name="BackBufferCopy" type="BackBufferCopy" parent="."]
+position = Vector2(32, 32)
+copy_mode = 2
+rect = Rect2(-32, -32, 64, 64)
+
+[node name="Panel" type="Panel" parent="."]
+self_modulate = Color(1, 1, 1, 0.32941177)
+use_parent_material = true
+custom_minimum_size = Vector2(20, 60)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -10.0
+offset_top = -30.0
+offset_right = 10.0
+offset_bottom = 30.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = ExtResource("1_r7w2q")
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = -1
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = -1
+theme_override_constants/margin_bottom = 4
+
+[node name="ColorRect" type="Control" parent="Panel/MarginContainer"]
+material = ExtResource("2_r7w2q")
+layout_mode = 2
+script = ExtResource("3_3o6pf")
+metadata/_custom_type_script = "uid://c40rxkufutmua"
+
+[node name="MarginContainer2" type="MarginContainer" parent="Panel"]
+use_parent_material = true
+custom_minimum_size = Vector2(4, 0)
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -2.0
+offset_right = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="Rect2D" type="Control" parent="Panel/MarginContainer2"]
+custom_minimum_size = Vector2(0, 2)
+layout_mode = 2
+size_flags_vertical = 0
+script = ExtResource("3_3o6pf")
+metadata/_custom_type_script = "uid://c40rxkufutmua"
+
+[node name="Rect2D2" type="Control" parent="Panel/MarginContainer2"]
+custom_minimum_size = Vector2(0, 2)
+layout_mode = 2
+size_flags_vertical = 8
+script = ExtResource("3_3o6pf")
+metadata/_custom_type_script = "uid://c40rxkufutmua"
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel/MarginContainer2"]
+custom_minimum_size = Vector2(4, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/margin_left = 1
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 1
+theme_override_constants/margin_bottom = 5
+
+[node name="Rect2D" type="Control" parent="Panel/MarginContainer2/MarginContainer"]
+custom_minimum_size = Vector2(0, 2)
+layout_mode = 2
+size_flags_vertical = 0
+script = ExtResource("3_3o6pf")
+metadata/_custom_type_script = "uid://c40rxkufutmua"
+
+[node name="Rect2D2" type="Control" parent="Panel/MarginContainer2/MarginContainer"]
+custom_minimum_size = Vector2(0, 2)
+layout_mode = 2
+size_flags_vertical = 8
+script = ExtResource("3_3o6pf")
+metadata/_custom_type_script = "uid://c40rxkufutmua"

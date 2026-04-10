@@ -1,0 +1,40 @@
+[gd_resource type="StyleBox" script_class="StyleBoxStacked" format=3 uid="uid://cpjwv2sa2srcb"]
+
+[ext_resource type="Script" uid="uid://c5j1egx2237sg" path="res://script/object/ref_counted/resource/style_box/style_box_stacked.gd" id="1_ffott"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b1mqk"]
+corner_radius_top_left = 1
+corner_radius_top_right = 1
+corner_radius_bottom_right = 1
+corner_radius_bottom_left = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ffott"]
+draw_center = false
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 0.5019608)
+corner_radius_top_left = 1
+corner_radius_top_right = 1
+corner_radius_bottom_right = 1
+corner_radius_bottom_left = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_otj0w"]
+draw_center = false
+border_width_left = 2
+border_width_top = 2
+border_color = Color(0, 0, 0, 0.8235294)
+corner_radius_top_left = 1
+corner_radius_top_right = 1
+corner_radius_bottom_right = 1
+corner_radius_bottom_left = 1
+
+[resource]
+resource_local_to_scene = false
+resource_name = ""
+content_margin_left = 4.0
+content_margin_top = -1.0
+content_margin_right = 4.0
+content_margin_bottom = -1.0
+script = ExtResource("1_ffott")
+style_boxes = Array[StyleBox]([SubResource("StyleBoxFlat_b1mqk"), SubResource("StyleBoxFlat_ffott"), SubResource("StyleBoxFlat_otj0w")])
+metadata/_custom_type_script = "uid://c5j1egx2237sg"

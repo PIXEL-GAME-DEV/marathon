@@ -1,0 +1,13 @@
+[gd_resource type="AudioStreamRandomizer" load_steps=5 format=3 uid="uid://dhdcd03jao5ts"]
+
+[ext_resource type="AudioStream" uid="uid://cuxqumqde20ox" path="res://audio/stream/wav/environment/ambience/wind/wind_0.wav" id="1_y1tkn"]
+[ext_resource type="AudioStream" uid="uid://n440d14pcacq" path="res://audio/stream/wav/environment/ambience/wind/wind_1.wav" id="2_qn68f"]
+[ext_resource type="AudioStream" uid="uid://csqs63stuuuef" path="res://audio/stream/wav/environment/ambience/wind/wind_2.wav" id="3_1j0ls"]
+[ext_resource type="AudioStream" uid="uid://bg20ld6hxqkd6" path="res://audio/stream/wav/environment/ambience/wind/wind_3.wav" id="4_yhps8"]
+
+[resource]
+streams_count = 4
+stream_0/stream = ExtResource("1_y1tkn")
+stream_1/stream = ExtResource("2_qn68f")
+stream_2/stream = ExtResource("3_1j0ls")
+stream_3/stream = ExtResource("4_yhps8")

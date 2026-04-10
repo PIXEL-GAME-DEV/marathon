@@ -1,0 +1,15 @@
+[gd_resource type="AudioStreamRandomizer" load_steps=6 format=3 uid="uid://dhl847wiexg4x"]
+
+[ext_resource type="AudioStream" uid="uid://dm637asdhujnt" path="res://audio/stream/wav/character/human/bob/area_secure/human_area_secure_0.wav" id="1_41pl3"]
+[ext_resource type="AudioStream" uid="uid://mr0gvcgw1qrw" path="res://audio/stream/wav/character/human/bob/area_secure/human_area_secure_1.wav" id="2_0mrw7"]
+[ext_resource type="AudioStream" uid="uid://brd2ruaajylsf" path="res://audio/stream/wav/character/human/bob/area_secure/human_area_secure_2.wav" id="3_rab3t"]
+[ext_resource type="AudioStream" uid="uid://cf3w52rdm4dax" path="res://audio/stream/wav/character/human/bob/area_secure/human_area_secure_3.wav" id="4_h56af"]
+[ext_resource type="AudioStream" uid="uid://drgqmfra6fqwg" path="res://audio/stream/wav/character/human/bob/area_secure/human_area_secure_4.wav" id="5_m5s1h"]
+
+[resource]
+streams_count = 5
+stream_0/stream = ExtResource("1_41pl3")
+stream_1/stream = ExtResource("2_0mrw7")
+stream_2/stream = ExtResource("3_rab3t")
+stream_3/stream = ExtResource("4_h56af")
+stream_4/stream = ExtResource("5_m5s1h")

@@ -1,0 +1,10 @@
+[gd_resource type="AudioStreamRandomizer" load_steps=3 format=3 uid="uid://wstwn4a22nif"]
+
+[ext_resource type="AudioStream" uid="uid://v4cojaud31hb" path="res://audio/stream/wav/environment/ambience/alien_noise_2/alien_noise_2_0.wav" id="1_d34lv"]
+[ext_resource type="AudioStream" uid="uid://bxnxjaeedv88u" path="res://audio/stream/wav/environment/ambience/alien_noise_2/alien_noise_2_1.wav" id="2_7poa2"]
+
+[resource]
+playback_mode = 1
+streams_count = 2
+stream_0/stream = ExtResource("1_d34lv")
+stream_1/stream = ExtResource("2_7poa2")

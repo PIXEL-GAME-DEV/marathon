@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="TerminalPage" load_steps=3 format=3 uid="uid://cpcse0fgob5xb"]
+
+[ext_resource type="Script" uid="uid://buxc605bhppg7" path="res://script/object/ref_counted/resource/terminal_page.gd" id="1_eb0m2"]
+[ext_resource type="Texture2D" uid="uid://bce3dopfwohyt" path="res://texture/2d/compressed/marathon_logo.svg" id="1_knfvr"]
+
+[resource]
+script = ExtResource("1_eb0m2")
+text = "[color=green][b]U.E.S.C. Marathon[/b]
+Airlock 34-a Terminal Access <Port 19.1.2.128>"
+image_modulate = Color(0, 1, 0, 1)
+top_left_text = "Opening Connection to ß.4.5-23"
+top_right_text = "2218 08.25.2337"
+bottom_left_text = "CAS.qterm//CyberAcme Systems, Inc."
+bottom_right_text = "<931.461.60231.14.vt920>"
+metadata/_custom_type_script = "uid://buxc605bhppg7"

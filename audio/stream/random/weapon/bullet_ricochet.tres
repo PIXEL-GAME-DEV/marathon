@@ -1,0 +1,10 @@
+[gd_resource type="AudioStreamRandomizer" load_steps=3 format=3 uid="uid://b1cuaoipit5ed"]
+
+[ext_resource type="AudioStream" uid="uid://dhmdrntqn68q2" path="res://audio/stream/wav/weapon/bullet_ricochet/bullet_ricochet_0.wav" id="1_seb8m"]
+[ext_resource type="AudioStream" uid="uid://2pptt4iodoa3" path="res://audio/stream/wav/weapon/bullet_ricochet/bullet_ricochet_1.wav" id="2_j5thl"]
+
+[resource]
+playback_mode = 1
+streams_count = 2
+stream_0/stream = ExtResource("1_seb8m")
+stream_1/stream = ExtResource("2_j5thl")

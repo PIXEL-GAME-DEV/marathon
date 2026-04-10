@@ -1,0 +1,13 @@
+[gd_resource type="AudioStreamRandomizer" load_steps=5 format=3 uid="uid://ccag4simfrxp0"]
+
+[ext_resource type="AudioStream" uid="uid://byrly1yanntjg" path="res://audio/stream/wav/character/human/vacbob/stop_shooting_me_you_bastard/vacbob_stop_shooting_me_you_bastard_0.wav" id="1_yh8np"]
+[ext_resource type="AudioStream" uid="uid://dmaajsnf44u0c" path="res://audio/stream/wav/character/human/vacbob/stop_shooting_me_you_bastard/vacbob_stop_shooting_me_you_bastard_1.wav" id="2_2jytp"]
+[ext_resource type="AudioStream" uid="uid://cvk3jdj150jf0" path="res://audio/stream/wav/character/human/vacbob/stop_shooting_me_you_bastard/vacbob_stop_shooting_me_you_bastard_2.wav" id="3_k4hmq"]
+[ext_resource type="AudioStream" uid="uid://dbiaxbpwus7o0" path="res://audio/stream/wav/character/human/vacbob/stop_shooting_me_you_bastard/vacbob_stop_shooting_me_you_bastard_3.wav" id="4_6ropb"]
+
+[resource]
+streams_count = 4
+stream_0/stream = ExtResource("1_yh8np")
+stream_1/stream = ExtResource("2_2jytp")
+stream_2/stream = ExtResource("3_k4hmq")
+stream_3/stream = ExtResource("4_6ropb")

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Weapon" load_steps=3 format=3 uid="uid://cgs7l0a2jo7di"]
+
+[ext_resource type="Resource" uid="uid://ck8ckifv043wk" path="res://weapon/trigger/fist.tres" id="2_jqi62"]
+[ext_resource type="Script" uid="uid://baaaql84npw2r" path="res://script/object/ref_counted/resource/weapon.gd" id="3_d23ly"]
+
+[resource]
+script = ExtResource("3_d23ly")
+name = "Fist"
+name_long = "Fist"
+trigger_main = ExtResource("2_jqi62")
+metadata/_custom_type_script = "uid://baaaql84npw2r"

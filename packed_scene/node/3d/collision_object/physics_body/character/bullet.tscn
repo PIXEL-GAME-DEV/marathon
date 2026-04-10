@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://bwhsnoqkxo55s"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6woig"]
+emission_enabled = true
+emission = Color(1, 1, 1, 1)
+
+[node name="Projectile" type="Node3D"]
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
+radius = 0.001
+height = 1.0
+material = SubResource("StandardMaterial3D_6woig")

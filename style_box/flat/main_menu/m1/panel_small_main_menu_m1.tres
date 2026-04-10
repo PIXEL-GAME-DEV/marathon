@@ -1,0 +1,44 @@
+[gd_resource type="StyleBox" script_class="StyleBoxStacked" format=3 uid="uid://dvgy3qd27gotu"]
+
+[ext_resource type="Script" uid="uid://c5j1egx2237sg" path="res://script/object/ref_counted/resource/style_box/style_box_stacked.gd" id="1_n8pty"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n8pty"]
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+shadow_size = 2
+shadow_offset = Vector2(2, 2)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_otj0w"]
+draw_center = false
+border_width_left = 4
+border_width_top = 4
+border_color = Color(1, 1, 1, 0.5019608)
+border_blend = true
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ffott"]
+draw_center = false
+border_width_right = 4
+border_width_bottom = 16
+border_color = Color(0, 0, 0, 0.8235294)
+border_blend = true
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
+[resource]
+resource_local_to_scene = false
+resource_name = ""
+content_margin_left = 6.0
+content_margin_top = 4.0
+content_margin_right = 6.0
+content_margin_bottom = 16.0
+script = ExtResource("1_n8pty")
+style_boxes = Array[StyleBox]([SubResource("StyleBoxFlat_n8pty"), SubResource("StyleBoxFlat_otj0w"), SubResource("StyleBoxFlat_ffott")])
+metadata/_custom_type_script = "uid://c5j1egx2237sg"

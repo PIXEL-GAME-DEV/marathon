@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Trigger" load_steps=5 format=3 uid="uid://dxond7xq4m1hs"]
+
+[ext_resource type="Resource" uid="uid://br4ijpxnabe3p" path="res://weapon/projectile/assault_rifle_bullet.tres" id="1_bhxeu"]
+[ext_resource type="Script" uid="uid://bxtqllwunjfv6" path="res://script/object/ref_counted/resource/trigger.gd" id="1_dr5nf"]
+[ext_resource type="AudioStream" uid="uid://buhopn1vutq2e" path="res://audio/stream/wav/weapon/empty_gun.wav" id="3_ntr1s"]
+[ext_resource type="AudioStream" uid="uid://gmrv2nbw88t7" path="res://audio/stream/wav/weapon/assault_rifle/assault_rifle_firing.wav" id="4_48cke"]
+
+[resource]
+script = ExtResource("1_dr5nf")
+projectile = ExtResource("1_bhxeu")
+rounds_per_magazine = 52
+time_round = 0.067
+recoil_magnitude = 5.0
+error = 0.08726646259971647
+offset = Vector3(0, -0.05, 0)
+sound_firing = ExtResource("4_48cke")
+sound_click = ExtResource("3_ntr1s")
+metadata/_custom_type_script = "uid://bxtqllwunjfv6"

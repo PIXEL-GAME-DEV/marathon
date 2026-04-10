@@ -1,6 +1,4 @@
-@tool
-class_name Primitive2D
-extends Node2D
+@tool class_name Primitive2D extends Node2D
 
 
 @export var points: PackedVector2Array:
@@ -22,10 +20,6 @@ extends Node2D
 	set(value):
 		texture = value
 		queue_redraw()
-
-
-func _ready() -> void:
-	queue_redraw()
 
 
 func _draw() -> void:

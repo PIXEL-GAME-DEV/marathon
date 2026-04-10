@@ -1,45 +1,38 @@
-@tool
-class_name Rect2D
-extends Control
+@tool class_name RectPlus extends Control
 
 
-@export var filled: bool = true:
+@export var improved := true:
+	set(value):
+		improved = value
+		queue_redraw()
+
+@export var filled := true:
 	set(value):
 		filled = value
 		queue_redraw()
 
-@export var width: float = -1:
+@export_custom(PROPERTY_HINT_NONE, "suffix:px") var width := 2.0:
 	set(value):
 		width = value
 		queue_redraw()
 
-@export var anti_aliased: bool = false:
+
+@export_group("Anti_aliasing", "anti_aliasing")
+@export_custom(PROPERTY_HINT_GROUP_ENABLE, "") var anti_aliasing := true:
 	set(value):
-		anti_aliased = value
+		anti_aliasing = value
 		queue_redraw()
 
-@export var anti_aliasing_size: float = 1:
+@export_range(0.01, 10, 0.001, "suffix:px") var anti_aliasing_size := 1.0:
 	set(value):
 		anti_aliasing_size = value
 		queue_redraw()
 
 
-func _ready() -> void:
-	queue_redraw()
-
-
 func _draw() -> void:
-	var aa: float = 1
-	if anti_aliased:
-		var scale_factor: float = 1
-		var window: Window = get_window()
-		if window: scale_factor = window.get_oversampling()
-		# Adjust AA feather size to account for the 2D scale factor,
-		# so that antialiasing doesn't become blurry at viewport resolutions
-		# higher than the default when using the `canvas_items` stretch mode
-		# (or when using `oversampling` values different than `1.0`).
-		aa = anti_aliasing_size / scale_factor
-	
-	draw_set_transform(Vector2.ZERO, 0, Vector2.ONE * aa)
-	draw_rect(Rect2(Vector2.ZERO, size / aa), Color.WHITE, filled,
-			width / aa / 2, anti_aliased)
+	if improved:
+		CanvasItemFuncs.draw_rect(self, Rect2(Vector2.ZERO, get_rect().size),
+				Color.WHITE, filled, width, anti_aliasing, anti_aliasing_size) 
+	else:
+		draw_rect(Rect2(Vector2.ZERO, get_rect().size), Color.WHITE, filled,
+				width, anti_aliasing)

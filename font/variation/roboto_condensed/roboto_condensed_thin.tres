@@ -1,0 +1,9 @@
+[gd_resource type="FontVariation" load_steps=2 format=3 uid="uid://c7ywrc14suylp"]
+
+[ext_resource type="FontFile" uid="uid://bqs55uvsaf116" path="res://font/file/roboto_condensed/roboto_condensed_variable_font_weight.ttf" id="1_2v8tm"]
+
+[resource]
+base_font = ExtResource("1_2v8tm")
+variation_opentype = {
+2003265652: 100
+}

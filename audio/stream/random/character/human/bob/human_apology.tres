@@ -1,0 +1,13 @@
+[gd_resource type="AudioStreamRandomizer" load_steps=5 format=3 uid="uid://71fv7mqvl6ut"]
+
+[ext_resource type="AudioStream" uid="uid://cepkf8logiy2" path="res://audio/stream/wav/character/human/bob/apology/human_apology_0.wav" id="1_x4rvk"]
+[ext_resource type="AudioStream" uid="uid://bkwbs41570s5x" path="res://audio/stream/wav/character/human/bob/apology/human_apology_1.wav" id="2_4u4yr"]
+[ext_resource type="AudioStream" uid="uid://2mvap772pl6w" path="res://audio/stream/wav/character/human/bob/apology/human_apology_2.wav" id="3_jbhey"]
+[ext_resource type="AudioStream" uid="uid://o21lthvag0ec" path="res://audio/stream/wav/character/human/bob/apology/human_apology_3.wav" id="4_m2a1w"]
+
+[resource]
+streams_count = 4
+stream_0/stream = ExtResource("1_x4rvk")
+stream_1/stream = ExtResource("2_4u4yr")
+stream_2/stream = ExtResource("3_jbhey")
+stream_3/stream = ExtResource("4_m2a1w")

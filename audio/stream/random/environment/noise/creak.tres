@@ -1,0 +1,10 @@
+[gd_resource type="AudioStreamRandomizer" load_steps=3 format=3 uid="uid://b7qf8d3b7xshv"]
+
+[ext_resource type="AudioStream" uid="uid://bo8dlxaocqbqu" path="res://audio/stream/wav/environment/ambience/creak/creak_0.wav" id="1_uq2rt"]
+[ext_resource type="AudioStream" uid="uid://bir7gmemx8hrq" path="res://audio/stream/wav/environment/ambience/creak/creak_1.wav" id="2_yw2n5"]
+
+[resource]
+playback_mode = 1
+streams_count = 2
+stream_0/stream = ExtResource("1_uq2rt")
+stream_1/stream = ExtResource("2_yw2n5")

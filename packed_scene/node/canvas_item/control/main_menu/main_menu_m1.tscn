@@ -1,0 +1,238 @@
+[gd_scene format=3 uid="uid://cbage3bi3a826"]
+
+[ext_resource type="StyleBox" uid="uid://dvgy3qd27gotu" path="res://style_box/flat/main_menu/m1/panel_small_main_menu_m1.tres" id="1_3qv7r"]
+[ext_resource type="FontVariation" uid="uid://dwe65o3wjfyb3" path="res://font/variation/logo.tres" id="1_fxyrj"]
+[ext_resource type="Theme" uid="uid://52qg0mkbgrw" path="res://theme/main_menu_m1.tres" id="2_6s6au"]
+[ext_resource type="StyleBox" uid="uid://cqbjb7d8lsw5u" path="res://style_box/flat/main_menu/m1/panel_big_main_menu_m1.tres" id="2_fxyrj"]
+[ext_resource type="Texture2D" uid="uid://b4tcpff2eycia" path="res://texture/2d/compressed/grid.png" id="4_6s6au"]
+[ext_resource type="PackedScene" uid="uid://qa4rwfvd227v" path="res://packed_scene/node/canvas_item/control/powered_by_godot.tscn" id="4_7p3mv"]
+
+[node name="MainMenuM1" type="Control" unique_id=836417162]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=341142851]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="." unique_id=1613769029]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -173.5
+offset_right = 173.5
+offset_bottom = 200.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0.5019608, 1, 0.2509804)
+theme_override_colors/font_outline_color = Color(0, 0.5019608, 1, 0.2509804)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("1_fxyrj")
+theme_override_font_sizes/font_size = 200
+text = "M A R A T H O N"
+
+[node name="Control" type="Control" parent="." unique_id=558709318]
+custom_minimum_size = Vector2(310, 260)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_6s6au")
+
+[node name="PanelContainer" type="PanelContainer" parent="Control" unique_id=834405918]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = ExtResource("2_fxyrj")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/PanelContainer" unique_id=1493799357]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+
+[node name="BeginNewGame" type="Button" parent="Control/PanelContainer/VBoxContainer" unique_id=1414951140]
+layout_mode = 2
+theme_type_variation = &"EmbossedButton"
+text = "BEGIN NEW GAME"
+
+[node name="ContinueSavedGame" type="Button" parent="Control/PanelContainer/VBoxContainer" unique_id=1148737870]
+layout_mode = 2
+theme_type_variation = &"EmbossedButton"
+text = "CONTINUE SAVED GAME"
+
+[node name="Control1" type="Control" parent="Control" unique_id=871150297]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+grow_vertical = 2
+
+[node name="PanelContainer2" type="PanelContainer" parent="Control/Control1" unique_id=2061340293]
+custom_minimum_size = Vector2(180, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -89.0
+offset_top = -50.5
+offset_right = 89.0
+offset_bottom = 50.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+
+[node name="TextureRect" type="TextureRect" parent="Control/Control1/PanelContainer2" unique_id=1372771577]
+self_modulate = Color(0, 0.2509804, 0, 1)
+layout_mode = 2
+texture = ExtResource("4_6s6au")
+stretch_mode = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/Control1/PanelContainer2" unique_id=1293403652]
+layout_mode = 2
+
+[node name="GatherNetworkGame" type="Button" parent="Control/Control1/PanelContainer2/VBoxContainer" unique_id=1535877262]
+layout_mode = 2
+theme_type_variation = &"FlatButton"
+text = "GATHER NETWORK GAME"
+
+[node name="JoinNetworkGame" type="Button" parent="Control/Control1/PanelContainer2/VBoxContainer" unique_id=1785534950]
+layout_mode = 2
+theme_type_variation = &"FlatButton"
+text = "Join network game"
+
+[node name="Preferences" type="Button" parent="Control/Control1/PanelContainer2/VBoxContainer" unique_id=603334861]
+layout_mode = 2
+theme_type_variation = &"FlatButton"
+text = "Preferences"
+
+[node name="Control2" type="Control" parent="Control" unique_id=1963241801]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="PanelContainer3" type="PanelContainer" parent="Control/Control2" unique_id=958316281]
+custom_minimum_size = Vector2(180, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -71.5
+offset_top = -50.5
+offset_right = 71.5
+offset_bottom = 50.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+
+[node name="TextureRect" type="TextureRect" parent="Control/Control2/PanelContainer3" unique_id=1302535749]
+self_modulate = Color(0, 0.2509804, 0, 1)
+layout_mode = 2
+texture = ExtResource("4_6s6au")
+stretch_mode = 1
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="Control/Control2/PanelContainer3" unique_id=1979582070]
+layout_mode = 2
+
+[node name="GatherNetworkGame" type="Button" parent="Control/Control2/PanelContainer3/VBoxContainer3" unique_id=1923436763]
+layout_mode = 2
+theme_type_variation = &"FlatButton"
+text = "Replay last film"
+
+[node name="JoinNetworkGame" type="Button" parent="Control/Control2/PanelContainer3/VBoxContainer3" unique_id=864724092]
+layout_mode = 2
+theme_type_variation = &"FlatButton"
+text = "Save last film"
+
+[node name="Preferences" type="Button" parent="Control/Control2/PanelContainer3/VBoxContainer3" unique_id=1562770100]
+layout_mode = 2
+theme_type_variation = &"FlatButton"
+text = "Replay saved film"
+
+[node name="Control3" type="Control" parent="Control" unique_id=1969937588]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="PanelContainer4" type="PanelContainer" parent="Control/Control3" unique_id=1685602306]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -29.0
+offset_right = 20.0
+offset_bottom = 29.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme_override_styles/panel = ExtResource("1_3qv7r")
+
+[node name="VBoxContainer4" type="VBoxContainer" parent="Control/Control3/PanelContainer4" unique_id=1644764309]
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="Credits" type="Button" parent="Control/Control3/PanelContainer4/VBoxContainer4" unique_id=789529402]
+layout_mode = 2
+size_flags_vertical = 4
+theme_type_variation = &"EmbossedButton"
+text = "CREDITS"
+
+[node name="Quit" type="Button" parent="Control/Control3/PanelContainer4/VBoxContainer4" unique_id=1041248879]
+layout_mode = 2
+size_flags_vertical = 4
+theme_type_variation = &"EmbossedButton"
+text = "QUIT"
+
+[node name="PoweredByGodot" parent="." unique_id=1227603862 instance=ExtResource("4_7p3mv")]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -128.0
+offset_top = -48.0
+offset_right = 0.0
+offset_bottom = 0.0
+grow_horizontal = 0
+grow_vertical = 0

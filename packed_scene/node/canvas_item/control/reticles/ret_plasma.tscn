@@ -1,0 +1,129 @@
+[gd_scene load_steps=6 format=3 uid="uid://dlmnl7a36ussr"]
+
+[ext_resource type="Material" uid="uid://vft2418maqcq" path="res://material/shader/canvas_item/screen.tres" id="1_0skhv"]
+[ext_resource type="StyleBox" uid="uid://dxndnglg0hmst" path="res://style_box/flat/ret_plasma/ret_plasma_inner.tres" id="1_3fjmd"]
+[ext_resource type="Texture2D" uid="uid://b6kxy56gse0vm" path="res://texture/2d/gradient/2d/ret_plasma.tres" id="2_kvhi2"]
+[ext_resource type="StyleBox" uid="uid://dtu337yj1ts7q" path="res://style_box/flat/ret_plasma/ret_plasma_outer.tres" id="4_b20eq"]
+[ext_resource type="Script" uid="uid://c40rxkufutmua" path="res://script/object/node/canvas_item/2d/rect.gd" id="5_ec63v"]
+
+[node name="RetPlasma" type="Control"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+mouse_behavior_recursive = 1
+
+[node name="BackBufferCopy" type="BackBufferCopy" parent="."]
+position = Vector2(32, 32)
+copy_mode = 2
+rect = Rect2(-32, -32, 64, 64)
+
+[node name="Panel" type="Panel" parent="."]
+self_modulate = Color(1, 1, 1, 0.8)
+use_parent_material = true
+custom_minimum_size = Vector2(34, 34)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -16.0
+offset_top = -16.0
+offset_right = 16.0
+offset_bottom = 16.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = ExtResource("1_3fjmd")
+
+[node name="TextureRect" type="TextureRect" parent="Panel"]
+material = ExtResource("1_0skhv")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = -1.0
+offset_right = 1.0
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_kvhi2")
+expand_mode = 1
+
+[node name="TextureRect2" type="TextureRect" parent="Panel"]
+material = ExtResource("1_0skhv")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.0
+offset_top = 10.0
+offset_right = -10.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_kvhi2")
+expand_mode = 1
+flip_h = true
+flip_v = true
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="Panel" type="Panel" parent="Panel/MarginContainer"]
+material = ExtResource("1_0skhv")
+layout_mode = 2
+theme_override_styles/panel = ExtResource("4_b20eq")
+
+[node name="RectPlus" type="Control" parent="."]
+self_modulate = Color(1, 1, 1, 0.5019608)
+use_parent_material = true
+custom_minimum_size = Vector2(12, 12)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -6.0
+offset_top = -6.0
+offset_right = 6.0
+offset_bottom = 6.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("5_ec63v")
+filled = false
+metadata/_custom_type_script = "uid://c40rxkufutmua"
+
+[node name="MarginContainer" type="MarginContainer" parent="RectPlus"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 3
+theme_override_constants/margin_top = -3
+theme_override_constants/margin_right = 3
+theme_override_constants/margin_bottom = -3
+
+[node name="RectPlus" type="Control" parent="RectPlus/MarginContainer"]
+material = ExtResource("1_0skhv")
+layout_mode = 2
+script = ExtResource("5_ec63v")
+metadata/_custom_type_script = "uid://c40rxkufutmua"

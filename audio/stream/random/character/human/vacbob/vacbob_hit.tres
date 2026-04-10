@@ -1,0 +1,10 @@
+[gd_resource type="AudioStreamRandomizer" load_steps=3 format=3 uid="uid://fsmssryxipie"]
+
+[ext_resource type="AudioStream" uid="uid://g2w1j4jy35x7" path="res://audio/stream/wav/character/human/vacbob/hit/vacbob_hit_0.wav" id="1_mal6f"]
+[ext_resource type="AudioStream" uid="uid://ex3vx33ptwak" path="res://audio/stream/wav/character/human/vacbob/hit/vacbob_hit_1.wav" id="2_jdpek"]
+
+[resource]
+playback_mode = 1
+streams_count = 2
+stream_0/stream = ExtResource("1_mal6f")
+stream_1/stream = ExtResource("2_jdpek")

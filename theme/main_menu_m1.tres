@@ -1,0 +1,22 @@
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://52qg0mkbgrw"]
+
+[ext_resource type="FontFile" uid="uid://bxkj54ra3b5d7" path="res://font/file/marapfhont.ttf" id="1_dheye"]
+[ext_resource type="StyleBox" uid="uid://cpjwv2sa2srcb" path="res://style_box/flat/main_menu/m1/embossed_button_main_menu_m1.tres" id="2_ypbmu"]
+
+[resource]
+EmbossedButton/base_type = &"Button"
+EmbossedButton/colors/font_color = Color(0, 0, 0, 1)
+EmbossedButton/colors/font_hover_color = Color(1, 0, 0, 1)
+EmbossedButton/colors/font_hover_pressed_color = Color(1, 0, 0, 1)
+EmbossedButton/font_sizes/font_size = 32
+EmbossedButton/fonts/font = ExtResource("1_dheye")
+EmbossedButton/styles/hover = ExtResource("2_ypbmu")
+EmbossedButton/styles/normal = ExtResource("2_ypbmu")
+FlatButton/colors/font_color = Color(0, 1, 0, 1)
+FlatButton/colors/font_disabled_color = Color(0.2509804, 0, 0, 1)
+FlatButton/colors/font_focus_color = Color(0, 0.5019608, 0, 1)
+FlatButton/colors/font_hover_color = Color(0, 0.5019608, 0, 1)
+FlatButton/colors/font_hover_pressed_color = Color(0, 0.5019608, 0, 1)
+FlatButton/colors/font_pressed_color = Color(0, 0.5019608, 0, 1)
+FlatButton/font_sizes/font_size = 32
+FlatButton/fonts/font = ExtResource("1_dheye")

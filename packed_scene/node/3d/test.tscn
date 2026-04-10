@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://cc1ltavni0505"]
+[gd_scene format=3 uid="uid://cc1ltavni0505"]
 
-[ext_resource type="Texture2D" uid="uid://d1o5iavmu57qq" path="res://texture/2d/compressed/icon.svg" id="1_evwrf"]
-[ext_resource type="Shader" uid="uid://cusfwhs8sh68x" path="res://shader/spatial/surface_texel.gdshader" id="2_ty3pu"]
+[ext_resource type="PackedScene" uid="uid://dwhmovoxiuinc" path="res://packed_scene/node/3d/collision_object/physics_body/character/player.tscn" id="2_ty3pu"]
+[ext_resource type="Texture2D" uid="uid://d1o5iavmu57qq" path="res://texture/2d/compressed/icon.svg" id="2_xux6u"]
+[ext_resource type="AudioStream" uid="uid://vlwja0fjvu17" path="res://audio/stream/ogg_vorbis/music/07.ogg" id="3_we277"]
 
 [sub_resource type="PhysicalSkyMaterial" id="PhysicalSkyMaterial_f6kva"]
 
@@ -12,53 +13,34 @@ sky_material = SubResource("PhysicalSkyMaterial_f6kva")
 background_mode = 2
 sky = SubResource("Sky_0vjo8")
 tonemap_mode = 2
-glow_enabled = true
+tonemap_white = 7.0
+volumetric_fog_ambient_inject = 1.0
+volumetric_fog_temporal_reprojection_enabled = false
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ty3pu"]
-albedo_texture = ExtResource("1_evwrf")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s573y"]
+albedo_texture = ExtResource("2_xux6u")
 uv1_triplanar = true
 texture_filter = 5
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_we277"]
-render_priority = 0
-shader = ExtResource("2_ty3pu")
-shader_parameter/albedo_color = Color(1, 1, 1, 1)
-shader_parameter/albedo_texture = ExtResource("1_evwrf")
-shader_parameter/uv1_scale = Vector3(2, 1, 1)
-shader_parameter/uv1_offset = Vector3(0, 0, 0)
-shader_parameter/uv1_triplanar = false
-shader_parameter/uv1_triplanar_sharpness = 1.0
-shader_parameter/uv1_world_triplanar = false
-shader_parameter/billboard_mode = 0
-shader_parameter/billboard_keep_scale = false
+[node name="Test" type="Node3D" unique_id=1419426252]
 
-[node name="Test" type="Node3D"]
-
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=2006432772]
 environment = SubResource("Environment_3d3br")
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=344983390]
 transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
-light_energy = 0.267
+light_angular_distance = 1.0
 shadow_enabled = true
+directional_shadow_blend_splits = true
 
-[node name="CSGBox3D" type="CSGBox3D" parent="."]
+[node name="Music" type="AudioStreamPlayer" parent="." unique_id=577042299]
+stream = ExtResource("3_we277")
+autoplay = true
+
+[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=1287824601]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+material_override = SubResource("StandardMaterial3D_s573y")
 use_collision = true
-size = Vector3(99, 2, 99)
-material = SubResource("StandardMaterial3D_ty3pu")
+size = Vector3(64, 2, 64)
 
-[node name="CSGSphere3D" type="CSGSphere3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8638066, 0)
-radial_segments = 6
-rings = 3
-material = SubResource("ShaderMaterial_we277")
-
-[node name="CSGSphere3D2" type="CSGSphere3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.15127277, 1.6104523, -0.76123095)
-radial_segments = 6
-rings = 3
-material = SubResource("ShaderMaterial_we277")
-
-[node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.94187, 0.33597767, 0, -0.33597767, 0.94187, 0, 1.2037072, 0.8743093)
+[node name="Player" parent="." unique_id=1928738470 instance=ExtResource("2_ty3pu")]

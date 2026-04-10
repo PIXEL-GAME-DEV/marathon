@@ -1,6 +1,4 @@
-@tool
-class_name ColoredPolygon2D
-extends Node2D
+@tool class_name ColoredPolygon2D extends Node2D
 
 
 @export var points: PackedVector2Array:

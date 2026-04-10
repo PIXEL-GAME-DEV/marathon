@@ -1,0 +1,7 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://qyhpkfuxev18"]
+
+[ext_resource type="Shader" uid="uid://dkvjbip35jrrt" path="res://shader/spatial/light_probe.gdshader" id="1_rdfxd"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_rdfxd")

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Trigger" load_steps=3 format=3 uid="uid://ck8ckifv043wk"]
+
+[ext_resource type="Resource" uid="uid://vkbgywqniiu1" path="res://weapon/projectile/fist_punch.tres" id="1_8ait1"]
+[ext_resource type="Script" uid="uid://bxtqllwunjfv6" path="res://script/object/ref_counted/resource/trigger.gd" id="1_8eimi"]
+
+[resource]
+script = ExtResource("1_8eimi")
+projectile = ExtResource("1_8ait1")
+time_round = 1.0
+metadata/_custom_type_script = "uid://bxtqllwunjfv6"

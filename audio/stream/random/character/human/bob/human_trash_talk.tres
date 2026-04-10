@@ -1,0 +1,12 @@
+[gd_resource type="AudioStreamRandomizer" load_steps=4 format=3 uid="uid://ncp64j05tcr0"]
+
+[ext_resource type="AudioStream" uid="uid://chtcherqpu006" path="res://audio/stream/wav/character/human/bob/trash_talk/human_trash_talk_0.wav" id="1_2uhxi"]
+[ext_resource type="AudioStream" uid="uid://bied44xof7m2n" path="res://audio/stream/wav/character/human/bob/trash_talk/human_trash_talk_1.wav" id="2_jay4f"]
+[ext_resource type="AudioStream" uid="uid://c8vnhoasbnkvq" path="res://audio/stream/wav/character/human/bob/trash_talk/human_trash_talk_2.wav" id="3_2nioe"]
+
+[resource]
+playback_mode = 1
+streams_count = 3
+stream_0/stream = ExtResource("1_2uhxi")
+stream_1/stream = ExtResource("2_jay4f")
+stream_2/stream = ExtResource("3_2nioe")

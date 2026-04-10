@@ -1,0 +1,215 @@
+[gd_scene load_steps=13 format=3 uid="uid://dgs7phcl6nfpf"]
+
+[ext_resource type="Script" uid="uid://pv0ubnxbyfwj" path="res://script/object/node/canvas_item/control/hud.gd" id="1_3thk5"]
+[ext_resource type="Script" uid="uid://tf3fakxf5gcs" path="res://script/object/node/canvas_item/control/circle.gd" id="1_tt4iu"]
+[ext_resource type="StyleBox" uid="uid://dluc8vs2fbdn8" path="res://style_box/stacked/bar/bar_m1.tres" id="2_1fqjm"]
+[ext_resource type="PackedScene" uid="uid://b70fpcm2vyfaj" path="res://packed_scene/node/canvas_item/control/scope.tscn" id="2_3ncpd"]
+[ext_resource type="FontFile" uid="uid://bxxcn1niptpmm" path="res://font/file/envy_code_r/envy_code_r_bold.ttf" id="2_m51vx"]
+[ext_resource type="Script" uid="uid://enxglbiimd8p" path="res://script/object/node/canvas_item/control/label/fps.gd" id="3_3thk5"]
+[ext_resource type="Script" uid="uid://c4lqf4q84h1y7" path="res://script/object/node/canvas_item/2d/multiline_colors.gd" id="4_du258"]
+[ext_resource type="StyleBox" uid="uid://dr8ysg2mdn1hu" path="res://style_box/stacked/bar/bar_m2inf_red.tres" id="8_du258"]
+[ext_resource type="StyleBox" uid="uid://c2nb1ln5811f1" path="res://style_box/stacked/bar/bar_m2inf_back.tres" id="9_3ncpd"]
+[ext_resource type="StyleBox" uid="uid://ce82dcg7ubw41" path="res://style_box/stacked/bar/bar_m2inf_purple.tres" id="10_3thk5"]
+[ext_resource type="StyleBox" uid="uid://cfhnh5f0rcl2f" path="res://style_box/flat/grenade.tres" id="10_4mitx"]
+[ext_resource type="StyleBox" uid="uid://cs3d5ep1m23r0" path="res://style_box/stacked/bar/bar_m2inf_air.tres" id="11_gyktn"]
+
+[node name="Hud" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_behavior_recursive = 1
+script = ExtResource("1_3thk5")
+
+[node name="Scope" parent="." instance=ExtResource("2_3ncpd")]
+visible = false
+layout_mode = 1
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+unique_name_in_owner = true
+modulate = Color(0, 1, 0, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+text = "60"
+script = ExtResource("3_3thk5")
+
+[node name="BoxContainer" type="BoxContainer" parent="MarginContainer"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+
+[node name="Circle" type="Control" parent="MarginContainer/BoxContainer"]
+self_modulate = Color(0, 0, 0, 1)
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource("1_tt4iu")
+metadata/_custom_type_script = "uid://tf3fakxf5gcs"
+
+[node name="PolylineColors2D" type="Node2D" parent="MarginContainer/BoxContainer/Circle"]
+script = ExtResource("4_du258")
+points = PackedVector2Array(0, 13, 128, 13, 0, 30, 128, 30, 0, 47, 128, 47, 0, 64, 128, 64, 0, 81, 128, 81, 0, 98, 128, 98, 0, 115, 128, 115)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1)
+metadata/_custom_type_script = "uid://c4lqf4q84h1y7"
+
+[node name="Label" type="Label" parent="MarginContainer/BoxContainer/Circle"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -8.5
+offset_top = -12.0
+offset_right = 8.5
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/outline_size = 6
+theme_override_font_sizes/font_size = 12
+text = "15m"
+
+[node name="BoxContainer" type="BoxContainer" parent="MarginContainer/BoxContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+vertical = true
+
+[node name="Control" type="Control" parent="MarginContainer/BoxContainer/BoxContainer"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+
+[node name="Health1" type="ProgressBar" parent="MarginContainer/BoxContainer/BoxContainer/Control"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 4
+theme_override_styles/background = ExtResource("9_3ncpd")
+theme_override_styles/fill = ExtResource("8_du258")
+value = 81.94
+show_percentage = false
+
+[node name="Health2" type="ProgressBar" parent="MarginContainer/BoxContainer/BoxContainer/Control"]
+visible = false
+self_modulate = Color(1, 1, 0, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/fill = ExtResource("2_1fqjm")
+min_value = 100.0
+max_value = 200.0
+value = 109.76
+show_percentage = false
+
+[node name="Health3" type="ProgressBar" parent="MarginContainer/BoxContainer/BoxContainer/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/background = ExtResource("9_3ncpd")
+theme_override_styles/fill = ExtResource("10_3thk5")
+min_value = 200.0
+max_value = 300.0
+value = 250.0
+show_percentage = false
+
+[node name="Air" type="ProgressBar" parent="MarginContainer/BoxContainer/BoxContainer"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_styles/background = ExtResource("9_3ncpd")
+theme_override_styles/fill = ExtResource("11_gyktn")
+value = 35.26
+show_percentage = false
+
+[node name="PanelContainer" type="PanelContainer" parent="MarginContainer"]
+custom_minimum_size = Vector2(256, 96)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+
+[node name="Label" type="Label" parent="MarginContainer/PanelContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme_override_fonts/font = ExtResource("2_m51vx")
+theme_override_font_sizes/font_size = 13
+text = "FISTS"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/PanelContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+theme_override_constants/separation = 3
+
+[node name="Panel" type="Panel" parent="MarginContainer/PanelContainer/HBoxContainer"]
+custom_minimum_size = Vector2(7, 16)
+layout_mode = 2
+theme_override_styles/panel = ExtResource("10_4mitx")
+
+[node name="Panel2" type="Panel" parent="MarginContainer/PanelContainer/HBoxContainer"]
+custom_minimum_size = Vector2(7, 16)
+layout_mode = 2
+theme_override_styles/panel = ExtResource("10_4mitx")
+
+[node name="Panel3" type="Panel" parent="MarginContainer/PanelContainer/HBoxContainer"]
+custom_minimum_size = Vector2(7, 16)
+layout_mode = 2
+theme_override_styles/panel = ExtResource("10_4mitx")
+
+[node name="Panel4" type="Panel" parent="MarginContainer/PanelContainer/HBoxContainer"]
+custom_minimum_size = Vector2(7, 16)
+layout_mode = 2
+theme_override_styles/panel = ExtResource("10_4mitx")
+
+[node name="Panel5" type="Panel" parent="MarginContainer/PanelContainer/HBoxContainer"]
+custom_minimum_size = Vector2(7, 16)
+layout_mode = 2
+theme_override_styles/panel = ExtResource("10_4mitx")
+
+[node name="Panel6" type="Panel" parent="MarginContainer/PanelContainer/HBoxContainer"]
+custom_minimum_size = Vector2(7, 16)
+layout_mode = 2
+theme_override_styles/panel = ExtResource("10_4mitx")
+
+[node name="Panel7" type="Panel" parent="MarginContainer/PanelContainer/HBoxContainer"]
+custom_minimum_size = Vector2(7, 16)
+layout_mode = 2
+theme_override_styles/panel = ExtResource("10_4mitx")

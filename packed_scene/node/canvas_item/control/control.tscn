@@ -1,9 +1,17 @@
-[gd_scene load_steps=3 format=3 uid="uid://bfrvxm43312s6"]
+[gd_scene load_steps=8 format=3 uid="uid://bfrvxm43312s6"]
 
+[ext_resource type="Theme" uid="uid://cfg2ef2ymkwqs" path="res://theme/hud.tres" id="1_6qq1j"]
 [ext_resource type="Shader" uid="uid://bnfb1gc3642ql" path="res://shader/canvas_item/static.gdshader" id="1_mek1p"]
+[ext_resource type="StyleBox" uid="uid://4ayhl2k8m13w" path="res://style_box/flat/box/box_white.tres" id="1_npnqs"]
+[ext_resource type="FontFile" uid="uid://bxxcn1niptpmm" path="res://font/file/envy_code_r/envy_code_r_bold.ttf" id="4_vhwij"]
+[ext_resource type="StyleBox" uid="uid://c3yrxcymyxqjt" path="res://style_box/flat/rect_white.tres" id="7_6qq1j"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_nrhv0"]
 shader = ExtResource("1_mek1p")
+
+[sub_resource type="SystemFont" id="SystemFont_nwbfb"]
+font_names = PackedStringArray("Share Tech Mono")
+generate_mipmaps = true
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -12,15 +20,91 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("1_6qq1j")
 
 [node name="ColorRect" type="ColorRect" parent="."]
-modulate = Color(0, 1, 0, 1)
-material = SubResource("ShaderMaterial_nrhv0")
 layout_mode = 1
-offset_right = 349.0
-offset_bottom = 54.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
 
-[node name="Label" type="RichTextLabel" parent="ColorRect"]
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="Weapons" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 0
+
+[node name="Title" type="PanelContainer" parent="MarginContainer/HBoxContainer/Weapons"]
+self_modulate = Color(0.2509804, 0.2509804, 0.2509804, 1)
+layout_mode = 2
+theme_override_styles/panel = ExtResource("1_npnqs")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/HBoxContainer/Weapons/Title"]
+layout_mode = 2
+bbcode_enabled = true
+text = "[b]WEAPONS"
+fit_content = true
+scroll_active = false
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/HBoxContainer/Weapons"]
+layout_mode = 2
+bbcode_enabled = true
+text = "  1 [b].44 MAGNUM MEGA CLASS[/b]
+  1 [b]ALIEN WEAPON[/b]"
+fit_content = true
+scroll_active = false
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 0
+
+[node name="Title" type="PanelContainer" parent="MarginContainer/HBoxContainer/VBoxContainer2"]
+self_modulate = Color(0.2509804, 0.2509804, 0.2509804, 1)
+layout_mode = 2
+theme_override_styles/panel = ExtResource("1_npnqs")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/HBoxContainer/VBoxContainer2/Title"]
+layout_mode = 2
+bbcode_enabled = true
+text = "[b]AMMUNITION"
+fit_content = true
+scroll_active = false
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+bbcode_enabled = true
+text = "  1 [b].44 MAGNUM MEGA CLASS[/b]
+  1 [b]ALIEN WEAPON[/b]"
+fit_content = true
+scroll_active = false
+
+[node name="ColorRect" type="ColorRect" parent="MarginContainer/HBoxContainer"]
+self_modulate = Color(0, 0, 0, 1)
+material = SubResource("ShaderMaterial_nrhv0")
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="RichTextLabel" parent="MarginContainer/HBoxContainer/ColorRect"]
+visible = false
 layout_mode = 1
 anchors_preset = 12
 anchor_top = 1.0
@@ -29,17 +113,55 @@ anchor_bottom = 1.0
 offset_top = -46.0
 grow_horizontal = 2
 grow_vertical = 0
+theme_override_fonts/normal_font = SubResource("SystemFont_nwbfb")
 bbcode_enabled = true
 text = "[b]UNKNOWN WEAPON CLASS[/b]
 	System error 0xfded"
 fit_content = true
 
-[node name="Label" type="Label" parent="."]
-modulate = Color(0, 1, 0, 1)
+[node name="Label2" type="RichTextLabel" parent="MarginContainer/HBoxContainer/ColorRect"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -23.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/normal_font = SubResource("SystemFont_nwbfb")
+bbcode_enabled = true
+text = "[center][b]FISTS[/b]"
+fit_content = true
+scroll_active = false
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
 layout_mode = 0
-offset_left = 3.0
-offset_top = 59.0
-offset_right = 43.0
-offset_bottom = 82.0
+offset_left = 156.0
+offset_top = 199.0
+offset_right = 226.0
+offset_bottom = 289.0
 theme_override_constants/outline_size = 4
-text = "15m"
+theme_override_fonts/font = ExtResource("4_vhwij")
+theme_override_styles/background = ExtResource("7_6qq1j")
+theme_override_styles/fill = ExtResource("1_npnqs")
+max_value = 1.0
+value = 0.5
+fill_mode = 3
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -109.0
+offset_top = -83.0
+offset_right = 109.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("4_vhwij")
+theme_override_font_sizes/font_size = 13
+text = "Illegal
+KKV-7 10MM FLECHETTE SMG
+ MMMMMMMM()"

@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="TerminalPage" load_steps=3 format=3 uid="uid://cihjg5b4jckl8"]
+
+[ext_resource type="Texture2D" uid="uid://bce3dopfwohyt" path="res://texture/2d/compressed/marathon_logo.svg" id="1_fv48j"]
+[ext_resource type="Script" uid="uid://buxc605bhppg7" path="res://script/object/ref_counted/resource/terminal_page.gd" id="1_sb1ba"]
+
+[resource]
+script = ExtResource("1_sb1ba")
+text = "<Message to All Marathon Terminals>
+
+[b]Marathon Emergency Systems Broadcast[/b]
+
+Today at 0820 hours, the Marathon came under surprise attack from unknown hostile forces. The Marathon has sustained serious damage.
+
+At 0830 hours, alien forces boarded the Marathon. The current situation is dire. All personnel are required to arm themselves and fight for their lives.
+<Posted 2794.7.3.14.08.39>
+
+***INCOMING MESSAGE FROM LEELA***
+
+Welcome to the Marathon. I am Leela, one of the two surviving Artificial Intelligences aboard the Marathon.  I have been severely damaged, and am working to understand the current situation.
+
+Find the teleport terminal located in the Hangar's control room. By that time, I should have a better idea of what is going on.
+
+***END MESSAGE***"
+top_left_text = "UESCTerm 802.11 (remote override)"
+top_right_text = "2218 08.25.2337"
+metadata/_custom_type_script = "uid://buxc605bhppg7"

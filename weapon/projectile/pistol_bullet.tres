@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="ProjectileResource" load_steps=7 format=3 uid="uid://bmss22ihe5o22"]
+
+[ext_resource type="Resource" uid="uid://foh4hk64h3f0" path="res://weapon/projectile/ballistics/projectile.tres" id="1_ctxh7"]
+[ext_resource type="Resource" uid="uid://cpbimx3rxhmjr" path="res://weapon/damage/punch.tres" id="2_fr40q"]
+[ext_resource type="PackedScene" uid="uid://bwhsnoqkxo55s" path="res://packed_scene/node/3d/collision_object/physics_body/character/bullet.tscn" id="2_v0kli"]
+[ext_resource type="Resource" uid="uid://bvuudl5ynu0at" path="res://weapon/detonation/bullet_ricochet.tres" id="3_1a16h"]
+[ext_resource type="Script" uid="uid://dewtggflv4fiq" path="res://script/object/ref_counted/projectile.gd" id="3_mlx6m"]
+[ext_resource type="Shape3D" uid="uid://b4rmdc3vtdx5n" path="res://shape/3d/sphere/point.tres" id="4_nk2ia"]
+
+[resource]
+script = ExtResource("3_mlx6m")
+model = ExtResource("2_v0kli")
+shape = ExtResource("4_nk2ia")
+damage = ExtResource("2_fr40q")
+detonation = ExtResource("3_1a16h")
+ballistics = ExtResource("1_ctxh7")
+metadata/_custom_type_script = "uid://dewtggflv4fiq"

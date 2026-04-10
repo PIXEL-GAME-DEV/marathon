@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="ProjectileResource" load_steps=3 format=3 uid="uid://b64tlo5lsm4ar"]
+
+[ext_resource type="Script" uid="uid://dewtggflv4fiq" path="res://script/object/ref_counted/projectile.gd" id="3_cuxa2"]
+[ext_resource type="Shape3D" uid="uid://b4rmdc3vtdx5n" path="res://shape/3d/sphere/point.tres" id="4_73np5"]
+
+[resource]
+script = ExtResource("3_cuxa2")
+shape = ExtResource("4_73np5")
+damage_type = "explosion"
+damage = 80.0
+damage_random = 20.0
+speed = 30.0
+max_range = 0.0
+detonation_radius = 2.5
+metadata/_custom_type_script = "uid://dewtggflv4fiq"

@@ -1,0 +1,15 @@
+[gd_resource type="AudioStreamRandomizer" load_steps=6 format=3 uid="uid://btc33mxw8y1mo"]
+
+[ext_resource type="AudioStream" uid="uid://c2hsxka7mnk40" path="res://audio/stream/wav/character/human/bob/activation/human_activation_0.wav" id="1_4fok1"]
+[ext_resource type="AudioStream" uid="uid://jpo7b2mmhy0l" path="res://audio/stream/wav/character/human/bob/activation/human_activation_1.wav" id="2_513k8"]
+[ext_resource type="AudioStream" uid="uid://o5ry5ytflt3p" path="res://audio/stream/wav/character/human/bob/activation/human_activation_2.wav" id="3_75lby"]
+[ext_resource type="AudioStream" uid="uid://hyd3m42de3st" path="res://audio/stream/wav/character/human/bob/activation/human_activation_3.wav" id="4_c2oyy"]
+[ext_resource type="AudioStream" uid="uid://dfx0qi8j8j3hr" path="res://audio/stream/wav/character/human/bob/activation/human_activation_4.wav" id="5_pf8bn"]
+
+[resource]
+streams_count = 5
+stream_0/stream = ExtResource("1_4fok1")
+stream_1/stream = ExtResource("2_513k8")
+stream_2/stream = ExtResource("3_75lby")
+stream_3/stream = ExtResource("4_c2oyy")
+stream_4/stream = ExtResource("5_pf8bn")

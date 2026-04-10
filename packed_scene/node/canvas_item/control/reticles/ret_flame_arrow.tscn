@@ -1,0 +1,51 @@
+[gd_scene load_steps=4 format=3 uid="uid://cqse1ofole2av"]
+
+[ext_resource type="Material" uid="uid://vft2418maqcq" path="res://material/shader/canvas_item/screen.tres" id="1_fsohp"]
+[ext_resource type="Script" uid="uid://c5belsintpoms" path="res://script/object/node/canvas_item/2d/arc.gd" id="2_giahf"]
+[ext_resource type="Script" uid="uid://chwo48tgf0h0b" path="res://script/object/node/canvas_item/2d/line.gd" id="3_p7naq"]
+
+[node name="RetFlameArrow" type="Control"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Arc2D1" type="Node2D" parent="."]
+material = ExtResource("1_fsohp")
+script = ExtResource("2_giahf")
+radius = 18.0
+start_angle = -0.22689280275926285
+end_angle = 0.22689280275926285
+width = 16.57
+metadata/_custom_type_script = "uid://c5belsintpoms"
+
+[node name="Arc2D2" type="Node2D" parent="."]
+use_parent_material = true
+script = ExtResource("2_giahf")
+radius = 14.0
+start_angle = -0.10471975511965978
+end_angle = 0.10471975511965978
+width = 3.0
+metadata/_custom_type_script = "uid://c5belsintpoms"
+
+[node name="Line2DPlus2" type="Node2D" parent="."]
+visible = false
+use_parent_material = true
+rotation = 0.06981317
+script = ExtResource("3_p7naq")
+from = Vector2(15.5, 0)
+to = Vector2(26, 0)
+width = 1.0
+
+[node name="Node2D" type="Node2D" parent="."]
+rotation = -0.10471976
+
+[node name="Line2DPlus" type="Node2D" parent="Node2D"]
+use_parent_material = true
+position = Vector2(0, 1)
+script = ExtResource("3_p7naq")
+to = Vector2(26, 0)

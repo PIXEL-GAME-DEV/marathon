@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://dwhmovoxiuinc"]
+
+[ext_resource type="Script" uid="uid://bj7fm2o12076p" path="res://script/object/node/3d/collision_object/physics_body/rigid/player.gd" id="1_x33jd"]
+[ext_resource type="Resource" uid="uid://dr2q48o1nibwt" path="res://weapon/assault_rifle.tres" id="2_cf7kn"]
+[ext_resource type="PackedScene" uid="uid://dgs7phcl6nfpf" path="res://packed_scene/node/canvas_item/control/hud.tscn" id="3_m6pfy"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_jt47v"]
+height = 1.6
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_jt47v"]
+height = 1.6
+rings = 0
+
+[node name="Player" type="RigidBody3D" unique_id=544577516 node_paths=PackedStringArray("light")]
+script = ExtResource("1_x33jd")
+move_speed = 7.0
+jump_impulse = 3.0
+weapon = ExtResource("2_cf7kn")
+light = NodePath("Head/Light")
+light_energy = 4.0
+
+[node name="CollisionShape" type="CollisionShape3D" parent="." unique_id=750839118]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8, 0)
+shape = SubResource("CylinderShape3D_jt47v")
+
+[node name="Head" type="Camera3D" parent="." unique_id=1106843628]
+unique_name_in_owner = true
+physics_interpolation_mode = 2
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4, 0)
+cull_mask = 1048573
+current = true
+
+[node name="AudioListener3D" type="AudioListener3D" parent="Head" unique_id=1489537620]
+doppler_tracking = 1
+
+[node name="Light" type="SpotLight3D" parent="Head" unique_id=158820918]
+light_energy = 0.0
+shadow_enabled = true
+spot_range = 10.0
+spot_attenuation = 2.0
+spot_angle = 60.0
+spot_angle_attenuation = 0.5
+
+[node name="Timer" type="Timer" parent="." unique_id=1151062395]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1864053067]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8, 0)
+visible = false
+gi_mode = 2
+mesh = SubResource("CylinderMesh_jt47v")
+
+[node name="Hud" parent="." unique_id=138916631 instance=ExtResource("3_m6pfy")]
