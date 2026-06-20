@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://dojjig8fcke1t"]
 
-[ext_resource type="Script" uid="uid://bdvrw4jmfxatd" path="res://source/script/object/node/canvas_item/2d/circle.gd" id="1_tydbb"]
-[ext_resource type="Material" uid="uid://vft2418maqcq" path="res://source/material/shader/canvas_item/screen.tres" id="2_a7hcv"]
-[ext_resource type="Script" uid="uid://c40rxkufutmua" path="res://source/script/object/node/canvas_item/2d/rect.gd" id="3_a7hcv"]
+[ext_resource type="Script" uid="uid://bdvrw4jmfxatd" path="res://source/script/circle_2d.gd" id="1_tydbb"]
+[ext_resource type="Material" uid="uid://vft2418maqcq" path="res://assets/materials/shader/canvas_item/screen.tres" id="2_a7hcv"]
+[ext_resource type="Script" uid="uid://c40rxkufutmua" path="res://source/script/rect.gd" id="3_a7hcv"]
 
 [node name="RetShotgun" type="Control"]
 modulate = Color(0, 1, 0, 1)

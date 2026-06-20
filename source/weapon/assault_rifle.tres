@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="Weapon" format=3 uid="uid://dr2q48o1nibwt"]
 
 [ext_resource type="PackedScene" uid="uid://n4o5be2n2xoj" path="res://source/ui/reticles/ret_assault_rifle.tscn" id="1_auley"]
-[ext_resource type="Script" uid="uid://baaaql84npw2r" path="res://source/script/object/ref_counted/resource/weapon.gd" id="2_fxrsf"]
+[ext_resource type="Script" uid="uid://baaaql84npw2r" path="res://source/script/weapon.gd" id="2_fxrsf"]
 [ext_resource type="Resource" uid="uid://dxond7xq4m1hs" path="res://source/weapon/trigger/assault_rifle.tres" id="3_jva8a"]
 [ext_resource type="Resource" uid="uid://cbshsjvn3t3gn" path="res://source/weapon/trigger/grenade.tres" id="4_c1khp"]
 

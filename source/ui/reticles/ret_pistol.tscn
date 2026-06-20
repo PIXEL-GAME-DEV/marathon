@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://863uq1iokyt7"]
 
-[ext_resource type="Script" uid="uid://bdvrw4jmfxatd" path="res://source/script/object/node/canvas_item/2d/circle.gd" id="1_d4cnk"]
-[ext_resource type="Material" uid="uid://vft2418maqcq" path="res://source/material/shader/canvas_item/screen.tres" id="2_em3yr"]
-[ext_resource type="Script" uid="uid://c40rxkufutmua" path="res://source/script/object/node/canvas_item/2d/rect.gd" id="4_fvv8i"]
+[ext_resource type="Script" uid="uid://bdvrw4jmfxatd" path="res://source/script/circle_2d.gd" id="1_d4cnk"]
+[ext_resource type="Material" uid="uid://vft2418maqcq" path="res://assets/materials/shader/canvas_item/screen.tres" id="2_em3yr"]
+[ext_resource type="Script" uid="uid://c40rxkufutmua" path="res://source/script/rect.gd" id="4_fvv8i"]
 
-[node name="RetPistol" type="Control"]
+[node name="RetPistol" type="Control" unique_id=1638415398]
 modulate = Color(0, 1, 0, 1)
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 3
@@ -21,11 +21,11 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_behavior_recursive = 1
 
-[node name="BackBufferCopy" type="BackBufferCopy" parent="."]
+[node name="BackBufferCopy" type="BackBufferCopy" parent="." unique_id=897912989]
 copy_mode = 2
 rect = Rect2(0, 0, 64, 64)
 
-[node name="OuterCircle2D1" type="Node2D" parent="."]
+[node name="OuterCircle2D1" type="Node2D" parent="." unique_id=1809053747]
 self_modulate = Color(1, 1, 1, 0.28235295)
 use_parent_material = true
 position = Vector2(32, 32)
@@ -34,7 +34,7 @@ radius = 12.5
 filled = false
 width = 7.0
 
-[node name="RectPlus1" type="Control" parent="."]
+[node name="RectPlus1" type="Control" parent="." unique_id=2138291684]
 material = ExtResource("2_em3yr")
 anchors_preset = 0
 offset_right = 32.0
@@ -42,7 +42,7 @@ offset_bottom = 32.0
 script = ExtResource("4_fvv8i")
 metadata/_custom_type_script = "uid://c40rxkufutmua"
 
-[node name="RectPlus2" type="Control" parent="."]
+[node name="RectPlus2" type="Control" parent="." unique_id=223474733]
 material = ExtResource("2_em3yr")
 anchors_preset = 0
 offset_left = 32.0
@@ -52,11 +52,11 @@ offset_bottom = 64.0
 script = ExtResource("4_fvv8i")
 metadata/_custom_type_script = "uid://c40rxkufutmua"
 
-[node name="BackBufferCopy2" type="BackBufferCopy" parent="."]
+[node name="BackBufferCopy2" type="BackBufferCopy" parent="." unique_id=1949184455]
 copy_mode = 2
 rect = Rect2(0, 0, 64, 64)
 
-[node name="OuterCircle2D2" type="Node2D" parent="."]
+[node name="OuterCircle2D2" type="Node2D" parent="." unique_id=308841400]
 self_modulate = Color(1, 1, 1, 0.2)
 use_parent_material = true
 position = Vector2(32, 32)
@@ -65,7 +65,7 @@ radius = 12.5
 filled = false
 width = 7.0
 
-[node name="Rect2D3" type="Control" parent="."]
+[node name="Rect2D3" type="Control" parent="." unique_id=1692182237]
 material = ExtResource("2_em3yr")
 anchors_preset = 0
 offset_left = 32.0
@@ -74,7 +74,7 @@ offset_bottom = 32.0
 script = ExtResource("4_fvv8i")
 metadata/_custom_type_script = "uid://c40rxkufutmua"
 
-[node name="Rect2D4" type="Control" parent="."]
+[node name="Rect2D4" type="Control" parent="." unique_id=1501989759]
 material = ExtResource("2_em3yr")
 anchors_preset = 0
 offset_top = 32.0
@@ -83,7 +83,7 @@ offset_bottom = 64.0
 script = ExtResource("4_fvv8i")
 metadata/_custom_type_script = "uid://c40rxkufutmua"
 
-[node name="InnerCircle2D" type="Node2D" parent="."]
+[node name="InnerCircle2D" type="Node2D" parent="." unique_id=1847495871]
 self_modulate = Color(1, 1, 1, 0.78431374)
 use_parent_material = true
 position = Vector2(32, 32)

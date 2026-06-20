@@ -1,6 +1,6 @@
 [gd_resource type="StyleBox" script_class="StyleBoxStacked" format=3 uid="uid://dr8ysg2mdn1hu"]
 
-[ext_resource type="Script" uid="uid://c5j1egx2237sg" path="res://source/script/object/ref_counted/resource/style_box/style_box_stacked.gd" id="1_21jdm"]
+[ext_resource type="Script" uid="uid://c5j1egx2237sg" path="res://source/script/style_box_stacked.gd" id="1_21jdm"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5i57r"]
 bg_color = Color(1, 0, 0, 1)

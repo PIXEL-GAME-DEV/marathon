@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://624i3r0na21l"]
 
 [ext_resource type="PackedScene" uid="uid://u2bouyy4kvg0" path="res://source/ui/reticles/ret_rocket_arrow.tscn" id="1_hqwl5"]
-[ext_resource type="Material" uid="uid://vft2418maqcq" path="res://source/material/shader/canvas_item/screen.tres" id="2_4xeiu"]
-[ext_resource type="Script" uid="uid://c40rxkufutmua" path="res://source/script/object/node/canvas_item/2d/rect.gd" id="3_k0s7j"]
+[ext_resource type="Material" uid="uid://vft2418maqcq" path="res://assets/materials/shader/canvas_item/screen.tres" id="2_4xeiu"]
+[ext_resource type="Script" uid="uid://c40rxkufutmua" path="res://source/script/rect.gd" id="3_k0s7j"]
 
 [node name="RetRocket" type="Control"]
 clip_contents = true

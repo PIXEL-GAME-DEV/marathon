@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Ballistics" format=3 uid="uid://foh4hk64h3f0"]
 
-[ext_resource type="Script" uid="uid://bgfxvcmsxv4uq" path="res://source/script/object/ref_counted/resource/ballistics.gd" id="1_ckdic"]
+[ext_resource type="Script" uid="uid://bgfxvcmsxv4uq" path="res://source/script/ballistics.gd" id="1_ckdic"]
 
 [resource]
 script = ExtResource("1_ckdic")

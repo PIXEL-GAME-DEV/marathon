@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="Weapon" format=3 uid="uid://deivpuqyro5uc"]
 
 [ext_resource type="PackedScene" uid="uid://863uq1iokyt7" path="res://source/ui/reticles/ret_pistol.tscn" id="1_sq6xy"]
-[ext_resource type="Script" uid="uid://baaaql84npw2r" path="res://source/script/object/ref_counted/resource/weapon.gd" id="1_x6r3u"]
+[ext_resource type="Script" uid="uid://baaaql84npw2r" path="res://source/script/weapon.gd" id="1_x6r3u"]
 [ext_resource type="Resource" uid="uid://b2jgx4ytkaj81" path="res://source/weapon/trigger/pistol.tres" id="3_x6r3u"]
 
 [resource]

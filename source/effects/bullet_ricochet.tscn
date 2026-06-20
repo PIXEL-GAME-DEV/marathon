@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://uq1p4jvm0e6q"]
+
+[ext_resource type="Texture2D" uid="uid://de6u8cl37xbd" path="res://assets/texture/2d/compressed/46562-1-bullet-holes-free-hd-image.png" id="1_ru0do"]
+[ext_resource type="AudioStream" uid="uid://b1cuaoipit5ed" path="res://assets/audio/sfx/weapon/bullet_ricochet/bullet_ricochet.tres" id="2_o1fwv"]
+
+[node name="BulletRicochet" type="Node3D" unique_id=35263127]
+
+[node name="Decal" type="Decal" parent="." unique_id=1720984338]
+transform = Transform3D(-1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
+size = Vector3(0.1, 0.05, 0.1)
+texture_albedo = ExtResource("1_ru0do")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=7266648]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
+stream = ExtResource("2_o1fwv")
+attenuation_model = 2
+autoplay = true
+
+[node name="Timer" type="Timer" parent="." unique_id=469912578]
+process_callback = 0
+wait_time = 10.0
+one_shot = true
+autostart = true
