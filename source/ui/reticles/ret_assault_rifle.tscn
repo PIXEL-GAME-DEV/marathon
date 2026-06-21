@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://n4o5be2n2xoj"]
 
-[ext_resource type="Script" uid="uid://bdvrw4jmfxatd" path="res://source/script/circle_2d.gd" id="1_g1f7x"]
-[ext_resource type="Script" uid="uid://bcm8ubq8g3ur8" path="res://source/script/multiline.gd" id="2_bl2nu"]
+[ext_resource type="Script" path="res://source/script/circle_2d.gd" id="1_g1f7x"]
+[ext_resource type="Script" uid="uid://bcm8ubq8g3ur8" path="res://source/ui/multiline.gd" id="2_bl2nu"]
 [ext_resource type="Material" uid="uid://vft2418maqcq" path="res://assets/materials/shader/canvas_item/screen.tres" id="3_8yibe"]
 [ext_resource type="Script" uid="uid://c40rxkufutmua" path="res://source/script/rect.gd" id="5_e84hh"]
 

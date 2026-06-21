@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://uq1p4jvm0e6q"]
 
-[ext_resource type="Texture2D" uid="uid://de6u8cl37xbd" path="res://assets/texture/2d/compressed/46562-1-bullet-holes-free-hd-image.png" id="1_ru0do"]
+[ext_resource type="Texture2D" uid="uid://de6u8cl37xbd" path="res://assets/textures/46562-1-bullet-holes-free-hd-image.png" id="1_ru0do"]
 [ext_resource type="AudioStream" uid="uid://b1cuaoipit5ed" path="res://assets/audio/sfx/weapon/bullet_ricochet/bullet_ricochet.tres" id="2_o1fwv"]
 
 [node name="BulletRicochet" type="Node3D" unique_id=35263127]

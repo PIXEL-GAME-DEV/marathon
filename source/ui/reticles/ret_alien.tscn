@@ -1,43 +1,64 @@
 [gd_scene format=3 uid="uid://delj2pq18sr36"]
 
-[ext_resource type="Script" uid="uid://bdvrw4jmfxatd" path="res://source/script/circle_2d.gd" id="1_j6x2u"]
+[ext_resource type="Script" uid="uid://1sckra6xyg4g" path="res://source/ui/rescale_container.gd" id="1_bilyw"]
+[ext_resource type="Script" uid="uid://ccbjofmfvujse" path="res://source/ui/circle.gd" id="2_bilyw"]
 
-[node name="RetAlien" type="Control" unique_id=939100243]
-modulate = Color(1, 0, 0, 1)
+[node name="RetAlien" type="Control" unique_id=1670870301]
 custom_minimum_size = Vector2(64, 64)
+custom_maximum_size = Vector2(64, 64)
 layout_mode = 3
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -32.0
-offset_top = -32.0
-offset_right = 32.0
-offset_bottom = 32.0
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="RescaleContainer" type="Container" parent="." unique_id=1763368225]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-mouse_behavior_recursive = 1
+script = ExtResource("1_bilyw")
+metadata/_custom_type_script = "uid://1sckra6xyg4g"
 
-[node name="Circle2D" type="Node2D" parent="." unique_id=1464105777]
-self_modulate = Color(1, 1, 1, 0.8)
-use_parent_material = true
-position = Vector2(32, 19)
-script = ExtResource("1_j6x2u")
+[node name="SubViewportContainer" type="SubViewportContainer" parent="RescaleContainer" unique_id=1345210819]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+stretch = true
+
+[node name="SubViewport" type="SubViewport" parent="RescaleContainer/SubViewportContainer" unique_id=548707246]
+transparent_bg = true
+handle_input_locally = false
+size = Vector2i(64, 64)
+render_target_update_mode = 4
+
+[node name="CenterContainer" type="CenterContainer" parent="RescaleContainer/SubViewportContainer/SubViewport" unique_id=2089133198]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Control" type="Control" parent="RescaleContainer/SubViewportContainer/SubViewport/CenterContainer" unique_id=34677029]
+layout_mode = 2
+script = ExtResource("2_bilyw")
+improved = false
+position = Vector2(0, -12)
 radius = 4.0
 
-[node name="Circle2D2" type="Node2D" parent="." unique_id=889473471]
-self_modulate = Color(1, 1, 1, 0.8)
-use_parent_material = true
-position = Vector2(20, 40)
-script = ExtResource("1_j6x2u")
+[node name="Control2" type="Control" parent="RescaleContainer/SubViewportContainer/SubViewport/CenterContainer" unique_id=1895709200]
+layout_mode = 2
+script = ExtResource("2_bilyw")
+improved = false
+position = Vector2(12, 6)
 radius = 4.0
-width = 1.0
 
-[node name="Circle2D3" type="Node2D" parent="." unique_id=1182118748]
-self_modulate = Color(1, 1, 1, 0.8)
-use_parent_material = true
-position = Vector2(44, 40)
-script = ExtResource("1_j6x2u")
+[node name="Control3" type="Control" parent="RescaleContainer/SubViewportContainer/SubViewport/CenterContainer" unique_id=358227683]
+layout_mode = 2
+script = ExtResource("2_bilyw")
+improved = false
+position = Vector2(-12, 6)
 radius = 4.0
-width = 1.0

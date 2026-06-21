@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://cqse1ofole2av"]
 
 [ext_resource type="Material" uid="uid://vft2418maqcq" path="res://assets/materials/shader/canvas_item/screen.tres" id="1_fsohp"]
-[ext_resource type="Script" uid="uid://c5belsintpoms" path="res://source/script/arc.gd" id="2_giahf"]
-[ext_resource type="Script" uid="uid://chwo48tgf0h0b" path="res://source/script/line.gd" id="3_p7naq"]
+[ext_resource type="Script" uid="uid://crdl0hix1fm4a" path="res://source/ui/arc.gd" id="2_giahf"]
+[ext_resource type="Script" uid="uid://chwo48tgf0h0b" path="res://source/ui/line.gd" id="3_p7naq"]
 
 [node name="RetFlameArrow" type="Control" unique_id=230919244]
 layout_mode = 3

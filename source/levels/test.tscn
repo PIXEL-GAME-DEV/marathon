@@ -1,8 +1,9 @@
 [gd_scene format=3 uid="uid://cc1ltavni0505"]
 
 [ext_resource type="AudioStream" uid="uid://vlwja0fjvu17" path="res://assets/audio/music/07.ogg" id="1_52dl1"]
-[ext_resource type="Texture2D" uid="uid://d1o5iavmu57qq" path="res://assets/texture/2d/compressed/icon.svg" id="2_52dl1"]
+[ext_resource type="Texture2D" uid="uid://d1o5iavmu57qq" path="res://assets/textures/icon.svg" id="2_52dl1"]
 [ext_resource type="PackedScene" uid="uid://dwhmovoxiuinc" path="res://source/characters/player.tscn" id="3_vvowu"]
+[ext_resource type="Shader" uid="uid://d05j7kr5wvon7" path="res://source/shaders/spatial_texel_snap.gdshader" id="4_lv33h"]
 
 [sub_resource type="PhysicalSkyMaterial" id="PhysicalSkyMaterial_f6kva"]
 
@@ -22,6 +23,23 @@ albedo_texture = ExtResource("2_52dl1")
 uv1_triplanar = true
 texture_filter = 5
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_lv33h"]
+render_priority = 0
+shader = ExtResource("4_lv33h")
+shader_parameter/albedo_color = Color(1, 1, 1, 1)
+shader_parameter/albedo_texture = ExtResource("2_52dl1")
+shader_parameter/uv1_scale = Vector3(4, 2, 1)
+shader_parameter/uv1_offset = Vector3(0, 0, 0)
+shader_parameter/uv1_triplanar = false
+shader_parameter/uv1_triplanar_sharpness = 1.0
+shader_parameter/uv1_world_triplanar = false
+shader_parameter/billboard_mode = 2
+shader_parameter/billboard_keep_scale = false
+shader_parameter/roughness = 1.0
+shader_parameter/metallic = 0.0
+shader_parameter/uv_tiling = Vector2(1, 1)
+shader_parameter/uv_offset = Vector2(0, 0)
+
 [node name="Test" type="Node3D" unique_id=1419426252]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=2006432772]
@@ -29,7 +47,6 @@ environment = SubResource("Environment_3d3br")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=344983390]
 transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
-light_angular_distance = 1.0
 shadow_enabled = true
 directional_shadow_blend_splits = true
 
@@ -44,3 +61,8 @@ use_collision = true
 size = Vector3(64, 2, 64)
 
 [node name="Player" parent="." unique_id=1928738470 instance=ExtResource("3_vvowu")]
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="." unique_id=1981893199]
+material_override = SubResource("ShaderMaterial_lv33h")
+radial_segments = 64
+rings = 32

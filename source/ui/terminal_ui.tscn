@@ -2,7 +2,7 @@
 
 [ext_resource type="Theme" uid="uid://b7o05wkprcpwl" path="res://assets/themes/terminal/terminal.tres" id="1_mtk2r"]
 [ext_resource type="StyleBox" uid="uid://4ayhl2k8m13w" path="res://assets/themes/terminal/boxes/box_white.tres" id="2_mtk2r"]
-[ext_resource type="Texture2D" uid="uid://bce3dopfwohyt" path="res://assets/texture/2d/compressed/marathon_logo.svg" id="3_mtk2r"]
+[ext_resource type="Texture2D" uid="uid://bce3dopfwohyt" path="res://assets/textures/marathon_logo.svg" id="3_mtk2r"]
 
 [node name="TerminalUI" type="Control" unique_id=1562343128]
 layout_mode = 3

@@ -1,6 +1,6 @@
 [gd_resource type="StyleBox" script_class="StyleBoxStacked" format=3 uid="uid://dvgy3qd27gotu"]
 
-[ext_resource type="Script" uid="uid://c5j1egx2237sg" path="res://source/script/style_box_stacked.gd" id="1_n8pty"]
+[ext_resource type="Script" uid="uid://c5j1egx2237sg" path="res://source/ui/style_box_stacked.gd" id="1_n8pty"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n8pty"]
 corner_radius_top_left = 3

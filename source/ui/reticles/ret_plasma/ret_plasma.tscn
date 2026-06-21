@@ -2,7 +2,7 @@
 
 [ext_resource type="StyleBox" uid="uid://dxndnglg0hmst" path="res://source/ui/reticles/ret_plasma/ret_plasma_inner.tres" id="1_hic4m"]
 [ext_resource type="Material" uid="uid://vft2418maqcq" path="res://assets/materials/shader/canvas_item/screen.tres" id="2_wnj81"]
-[ext_resource type="Texture2D" uid="uid://b6kxy56gse0vm" path="res://assets/texture/2d/gradient/2d/ret_plasma.tres" id="3_hwro3"]
+[ext_resource type="Texture2D" uid="uid://b6kxy56gse0vm" path="res://assets/textures/gradient/ret_plasma.tres" id="3_hwro3"]
 [ext_resource type="StyleBox" uid="uid://dtu337yj1ts7q" path="res://source/ui/reticles/ret_plasma/ret_plasma_outer.tres" id="4_blw56"]
 [ext_resource type="Script" uid="uid://c40rxkufutmua" path="res://source/script/rect.gd" id="5_exo66"]
 

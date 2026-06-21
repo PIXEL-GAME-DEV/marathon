@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="TerminalPage" format=3 uid="uid://cihjg5b4jckl8"]
 
-[ext_resource type="Texture2D" uid="uid://bce3dopfwohyt" path="res://assets/texture/2d/compressed/marathon_logo.svg" id="1_fv48j"]
+[ext_resource type="Texture2D" uid="uid://bce3dopfwohyt" path="res://assets/textures/marathon_logo.svg" id="1_fv48j"]
 [ext_resource type="Script" uid="uid://buxc605bhppg7" path="res://source/script/terminal_page.gd" id="1_sb1ba"]
 
 [resource]
