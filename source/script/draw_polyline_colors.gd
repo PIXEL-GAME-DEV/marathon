@@ -36,7 +36,8 @@
 
 func _draw() -> void:
 	if improved:
-		CanvasItemFuncs.draw_polyline_colors(self, points, colors, width,
-				anti_aliasing, anti_aliasing_size)
+		pass
+		#CanvasItemFuncs.draw_polyline_colors(self, points, colors, width,
+				#anti_aliasing, anti_aliasing_size)
 	else:
 		draw_polyline_colors(points, colors, width, anti_aliasing)

@@ -33,7 +33,7 @@ window/stretch/aspect="expand"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/csg_terrain/plugin.cfg", "res://addons/health_hitbox_hurtbox/plugin.cfg", "res://addons/reflection_probe_preview/plugin.cfg")
+enabled=PackedStringArray("res://addons/health_hitbox_hurtbox/plugin.cfg", "res://addons/reflection_probe_preview/plugin.cfg")
 
 [input]
 
@@ -128,6 +128,7 @@ toggle_light={
 
 3d/run_on_separate_thread=true
 3d/physics_engine="Jolt Physics"
+3d/default_gravity=0.0
 common/physics_interpolation=true
 
 [rendering]

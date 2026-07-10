@@ -40,6 +40,9 @@ shader_parameter/metallic = 0.0
 shader_parameter/uv_tiling = Vector2(1, 1)
 shader_parameter/uv_offset = Vector2(0, 0)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_g4v7s"]
+size = Vector3(4, 4, 4)
+
 [node name="Test" type="Node3D" unique_id=1419426252]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=2006432772]
@@ -58,7 +61,7 @@ autoplay = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
 material_override = SubResource("StandardMaterial3D_s573y")
 use_collision = true
-size = Vector3(99, 2, 99)
+size = Vector3(9999, 2, 9999)
 
 [node name="CSGBox3D2" type="CSGBox3D" parent="CSGBox3D" unique_id=1616450487]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 1, 0)
@@ -67,28 +70,44 @@ use_collision = true
 size = Vector3(2, 0.5, 2)
 
 [node name="CSGBox3D2" type="CSGBox3D" parent="CSGBox3D/CSGBox3D2" unique_id=1268449615]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0.25, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0.25, 0)
 material_override = SubResource("StandardMaterial3D_s573y")
 use_collision = true
 size = Vector3(2, 0.5, 2)
 
 [node name="CSGBox3D2" type="CSGBox3D" parent="CSGBox3D/CSGBox3D2/CSGBox3D2" unique_id=1940194563]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0.25, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0.25, 0)
 material_override = SubResource("StandardMaterial3D_s573y")
 use_collision = true
 size = Vector3(2, 0.5, 2)
 
 [node name="CSGBox3D3" type="CSGBox3D" parent="CSGBox3D/CSGBox3D2/CSGBox3D2/CSGBox3D2" unique_id=1659552279]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0.25, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0.25, 0)
 material_override = SubResource("StandardMaterial3D_s573y")
 use_collision = true
 size = Vector3(2, 0.5, 2)
 
 [node name="Player" parent="." unique_id=1928738470 instance=ExtResource("3_vvowu")]
-transform = Transform3D(0.4267274, 0.9043803, 0, -0.9043803, 0.4267274, 0, 0, 0, 1, 0, 0.6262109, 0)
+transform = Transform3D(1, 0, 0, 0, 0.35690895, -0.9341393, 0, 0.9341393, 0.35690895, 0, 0.9559204, 0)
 
 [node name="CSGSphere3D" type="CSGSphere3D" parent="." unique_id=1981893199]
 visible = false
 material_override = SubResource("ShaderMaterial_lv33h")
 radial_segments = 64
 rings = 32
+
+[node name="RigidBody3D" type="RigidBody3D" parent="." unique_id=554934080]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, -32)
+axis_lock_linear_x = true
+axis_lock_linear_y = true
+axis_lock_angular_x = true
+axis_lock_angular_y = true
+axis_lock_angular_z = true
+mass = 1000.0
+constant_force = Vector3(0, 0, 9800)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D" unique_id=2142769764]
+shape = SubResource("BoxShape3D_g4v7s")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="RigidBody3D" unique_id=1638692461]
+size = Vector3(4, 4, 4)

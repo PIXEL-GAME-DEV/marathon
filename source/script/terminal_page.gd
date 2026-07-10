@@ -1,4 +1,5 @@
-class_name TerminalPage extends Resource
+class_name TerminalPage
+extends Resource
 
 
 @export_multiline var text: String = "Lorem ipsum."

@@ -1,9 +1,10 @@
 extends RigidBody3D
 
 
-@export var turn_speed := 1.0
-@export var move_accel := 5.0
-@export var jump_force: float = 50
+@export var turn_speed: float = 1
+@export var move_speed: float = 10
+@export var move_accel: float = 3
+@export var jump_force: float = 30
 @export var weapon: Weapon:
 	set(value):
 		weapon = value
@@ -37,51 +38,73 @@ func _unhandled_input(event: InputEvent) -> void:
 		turn_input += event.screen_relative
 
 
-func _physics_process(delta: float) -> void:
-	var ground: Object
-	var ground_normal := global_basis.y
-	if leg_cast.is_colliding():
-		ground = leg_cast.get_collider(0)
-		ground_normal = leg_cast.get_collision_normal(0)
-		var lc_col_safe_frac := leg_cast.get_closest_collision_safe_fraction()
-		var lc_col_pos := leg_cast.to_global(lc_col_safe_frac * leg_cast.target_position)
-		var g_accel := get_body_acceleration(ground)
-		var g_accel_dir := g_accel.normalized()
+func _physics_process(_delta: float) -> void:
+	var surface: Object
+	var s_normal := global_basis.y
 
-		# Cancels out accelerations and gravity so we float of the ground.
-		#linear_velocity += g_accel * delta
-
-		# Stand perpendicularly to the acceleration of the ground.
-		apply_torque(global_basis.y.cross(g_accel) * mass)
-
+	if leg_cast.is_colliding(): # Legs are standing on a surface.
 		if Input.is_action_pressed("jump"):
 			apply_central_force(global_basis.y * jump_force * mass)
-		else: # Extra force to float some distance away.
-			var d := (lc_col_pos + g_accel_dir * 0.5) - global_position
-			apply_central_force(hookes(d, linear_velocity.project(g_accel_dir), 100, 10))
 
-	var move_input := Input.get_vector(
+		surface = leg_cast.get_collider(0)
+		s_normal = leg_cast.get_collision_normal(0)
+		var lc_col_safe_frac := leg_cast.get_closest_collision_safe_fraction()
+		var lc_col_pos := leg_cast.to_global(lc_col_safe_frac * leg_cast.target_position)
+		var s_accel := get_body_acceleration(surface)
+
+		# The surface we are standing on is accelerating
+		# compared to an inertial reference frame.
+		if s_accel:
+			var s_accel_dir := s_accel.normalized()
+
+			# Cancels out accelerations and gravity so we float of the ground.
+			#linear_velocity += g_accel * delta
+
+			# Stand perpendicularly to the acceleration of the ground.
+			apply_torque(global_basis.y.cross(s_accel) * mass)
+			if not Input.is_action_pressed("jump"):
+				var d := (lc_col_pos + s_accel_dir * 0.5) - global_position
+				apply_central_force(hookes(d, linear_velocity.project(s_accel_dir), 100, 10))
+		else:
+			apply_torque(global_basis.y.cross(s_normal) * mass)
+			if not Input.is_action_pressed("jump"):
+				var d := (lc_col_pos + s_normal * 0.5) - global_position
+				apply_central_force(hookes(d, linear_velocity.project(s_normal), 100, 10))
+
+		var move_input := Input.get_vector(
 			"move_left", "move_right",
 			"move_forward", "move_backward")
 
-	if move_input:
-		var ground_velocity: Vector3 = get_safe(ground, "linear_velocity", Vector3.ZERO)
-		var relative_velocity := linear_velocity - ground_velocity
-		var move_dir_x := global_basis.x * move_input.x
-		var move_dir_z := global_basis.z * move_input.y
-		var move_dir := (move_dir_x + move_dir_z).slide(ground_normal)
-		move_dir = move_dir.normalized() * move_input.length()
-		#var move_target_velocity := move_dir
-		#var move_velocity_error := move_target_velocity - relative_velocity
-		apply_central_force(hookes(linear_velocity, relative_velocity, 10, 2) * mass)
+		var s_velocity: Vector3 = get_safe(surface, "linear_velocity", Vector3.ZERO)
+		var relative_velocity := linear_velocity - s_velocity
+		if move_input:
+			var move_dir_x := global_basis.x * move_input.x
+			var move_dir_z := global_basis.z * move_input.y
+			var move_dir := (move_dir_x + move_dir_z).slide(s_normal)
+			move_dir = move_dir.normalized() * move_input.length()
+			var move_target_velocity := move_dir * move_speed
+			var move_velocity_error := move_target_velocity - relative_velocity
+			apply_central_force(move_velocity_error * mass * move_accel)
+		else:
+			apply_central_force(-relative_velocity * mass * move_accel)
 
 	angular_velocity = Vector3.ZERO
 	apply_torque(-global_basis.y * mass * turn_input.x * turn_speed)
 	turn_input.x = 0
 
+
+func _process(delta: float) -> void:
+	turn_input += Input.get_vector("turn_left", "turn_right", "look_up", "look_down")
+	%Head.rotation.x -= turn_input.y * turn_speed * delta
+	%Head.rotation.x = clampf(%Head.rotation.x, -PI / 2, PI / 2)
+	turn_input.y = 0
+
+	if Input.is_action_just_pressed("toggle_light"):
+		toggle_light()
+
 	if Input.is_action_pressed("trigger1") and weapon and can_shoot:
 		can_shoot = false
-		get_tree().create_timer(weapon.trigger_main.time_round, false, true).timeout.connect(reset_fire)
+		get_tree().create_timer(weapon.trigger_main.time_round, false, false).timeout.connect(reset_fire)
 
 		var audio = AudioStreamPlayer.new()
 		audio.finished.connect(audio.queue_free)
@@ -103,16 +126,6 @@ func _physics_process(delta: float) -> void:
 		#projectile.global_translate(weapon.trigger_main.offset * %Camera.global_basis)
 		projectile.linear_velocity = linear_velocity
 		#projectile.apply_instant_accel(velocity + impulse_vec * projectile.projectile.ballistics.speed)
-
-
-func _process(delta: float) -> void:
-	turn_input += Input.get_vector("turn_left", "turn_right", "look_up", "look_down")
-	%Head.rotation.x -= turn_input.y * turn_speed * delta
-	%Head.rotation.x = clampf(%Head.rotation.x, -PI / 2, PI / 2)
-	turn_input.y = 0
-
-	if Input.is_action_just_pressed("toggle_light"):
-		toggle_light()
 
 
 func set_light(value: bool):

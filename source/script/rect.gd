@@ -31,8 +31,9 @@
 
 func _draw() -> void:
 	if improved:
-		CanvasItemFuncs.draw_rect(self, Rect2(Vector2.ZERO, get_rect().size),
-				Color.WHITE, filled, width, anti_aliasing, anti_aliasing_size)
+		pass
+		#CanvasItemFuncs.draw_rect(self, Rect2(Vector2.ZERO, get_rect().size),
+				#Color.WHITE, filled, width, anti_aliasing, anti_aliasing_size)
 	else:
 		draw_rect(Rect2(Vector2.ZERO, get_rect().size), Color.WHITE, filled,
 				width, anti_aliasing)
