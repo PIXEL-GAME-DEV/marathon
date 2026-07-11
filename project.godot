@@ -127,7 +127,6 @@ toggle_light={
 [physics]
 
 3d/run_on_separate_thread=true
-common/physics_ticks_per_second=180
 3d/physics_engine="Jolt Physics"
 common/physics_interpolation=true
 

@@ -37,12 +37,28 @@ layout_mode = 2
 [node name="Label" type="Label" parent="CenterContainer/PanelContainer/VBoxContainer/HBoxContainer" unique_id=668190912]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "Strength"
+text = "Strong"
 
-[node name="Strength" type="HSlider" parent="CenterContainer/PanelContainer/VBoxContainer/HBoxContainer" unique_id=1770525390]
+[node name="StrongMagnitude" type="HSlider" parent="CenterContainer/PanelContainer/VBoxContainer/HBoxContainer" unique_id=1770525390]
 layout_mode = 2
 size_flags_horizontal = 3
 max_value = 1.0
-step = 0.1
+step = 0.0
+tick_count = 11
+ticks_on_borders = true
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="CenterContainer/PanelContainer/VBoxContainer" unique_id=1065650838]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CenterContainer/PanelContainer/VBoxContainer/HBoxContainer2" unique_id=155414868]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Weak"
+
+[node name="WeakMagnitude" type="HSlider" parent="CenterContainer/PanelContainer/VBoxContainer/HBoxContainer2" unique_id=194102242]
+layout_mode = 2
+size_flags_horizontal = 3
+max_value = 1.0
+step = 0.0
 tick_count = 11
 ticks_on_borders = true
