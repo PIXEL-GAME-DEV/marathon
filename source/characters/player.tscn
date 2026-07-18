@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://dwhmovoxiuinc"]
 
 [ext_resource type="Script" uid="uid://bj7fm2o12076p" path="res://source/script/player.gd" id="1_h1d7b"]
-[ext_resource type="Resource" uid="uid://dr2q48o1nibwt" path="res://source/weapon/assault_rifle.tres" id="2_f7lk6"]
 [ext_resource type="PackedScene" uid="uid://dgs7phcl6nfpf" path="res://source/ui/hud.tscn" id="3_dl7oa"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_h1d7b"]
@@ -26,7 +25,6 @@ can_sleep = false
 script = ExtResource("1_h1d7b")
 turn_speed = 3.0
 move_speed = 7.0
-weapon = ExtResource("2_f7lk6")
 light = NodePath("SpringArm3D/Marker3D/Head/Light")
 light_energy = 4.0
 
