@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="ProjectileResource" format=3 uid="uid://b64tlo5lsm4ar"]
 
-[ext_resource type="Script" uid="uid://dewtggflv4fiq" path="res://source/script/resource_projectile.gd" id="3_cuxa2"]
+[ext_resource type="Script" uid="uid://dewtggflv4fiq" path="res://source/script/resource_shot.gd" id="3_cuxa2"]
 [ext_resource type="Shape3D" uid="uid://b4rmdc3vtdx5n" path="res://source/shape/3d/sphere/point.tres" id="4_73np5"]
 
 [resource]

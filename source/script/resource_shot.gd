@@ -1,7 +1,6 @@
-class_name ProjectileResource extends Resource
-
+class_name ShotResource
+extends Resource
 @export var model: PackedScene
-
 @export_group("Physics")
 @export var shape: Shape3D
 @export var mass: float = 1

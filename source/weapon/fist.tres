@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="Weapon" format=3 uid="uid://cgs7l0a2jo7di"]
 
 [ext_resource type="Resource" uid="uid://ck8ckifv043wk" path="res://source/weapon/trigger/fist.tres" id="2_jqi62"]
-[ext_resource type="Script" uid="uid://baaaql84npw2r" path="res://source/script/weapon.gd" id="3_d23ly"]
+[ext_resource type="Script" uid="uid://baaaql84npw2r" path="res://source/script/resource_weapon.gd" id="3_d23ly"]
 
 [resource]
 script = ExtResource("3_d23ly")

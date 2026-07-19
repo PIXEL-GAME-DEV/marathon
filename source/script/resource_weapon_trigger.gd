@@ -1,5 +1,5 @@
-class_name Trigger extends Resource
-
+class_name WeaponTrigger
+extends Resource
 @export var projectile: ProjectileResource
 @export var rounds_per_magazine = 1
 @export var time_round: float = 0
@@ -9,8 +9,7 @@ class_name Trigger extends Resource
 @export_range(0, 90, 0.01, "radians_as_degrees") var error: float = 0
 @export var offset: Vector3 = Vector3.ZERO
 @export var burst_count: int = 0
-
-@export_group("Audio", "sound_")
+@export_group("Sounds", "sound_")
 @export var sound_firing: AudioStream
 @export var sound_click: AudioStream
 @export var sound_charging: AudioStream
