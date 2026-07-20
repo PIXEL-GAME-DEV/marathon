@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://cvedu4bsduc52"]
+
+[ext_resource type="Script" uid="uid://c06lxden6p07t" path="res://source/movement.gd" id="1_xtata"]
+[ext_resource type="Resource" uid="uid://cg13nto2m6k84" path="res://source/monsters/player/walking.tres" id="2_atq8q"]
+[ext_resource type="Resource" uid="uid://dc01dc1ul4p61" path="res://source/monsters/player/running.tres" id="3_1c0hj"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_atq8q"]
+height = 1.0
+radius = 0.4
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_d0u6y"]
+height = 0.2
+radius = 0.4
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_g4v7s"]
+height = 0.667
+radius = 0.4
+
+[node name="Player" type="CharacterBody3D" unique_id=679833821 node_paths=PackedStringArray("collision_shape", "leg_cast", "leg_area", "leg_collision_shape", "head", "yaw", "pitch", "camera_3d")]
+script = ExtResource("1_xtata")
+walking_physics = ExtResource("2_atq8q")
+running_physics = ExtResource("3_1c0hj")
+collision_shape = NodePath("CollisionShape")
+leg_cast = NodePath("LegCast")
+leg_area = NodePath("LegArea")
+leg_collision_shape = NodePath("LegArea/LegCollisionShape")
+head = NodePath("Head")
+yaw = NodePath("Head/Yaw")
+pitch = NodePath("Head/Yaw/Pitch")
+camera_3d = NodePath("Head/Yaw/Pitch/Camera3D")
+
+[node name="CollisionShape" type="CollisionShape3D" parent="." unique_id=1235592558]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1, 0)
+shape = SubResource("CylinderShape3D_atq8q")
+
+[node name="LegCast" type="ShapeCast3D" parent="." unique_id=807228250]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CylinderShape3D_d0u6y")
+
+[node name="LegArea" type="Area3D" parent="." unique_id=1393880644]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.333, 0)
+visible = false
+
+[node name="LegCollisionShape" type="CollisionShape3D" parent="LegArea" unique_id=1826525183]
+shape = SubResource("CylinderShape3D_g4v7s")
+disabled = true
+
+[node name="Head" type="Node3D" parent="." unique_id=595317731]
+physics_interpolation_mode = 2
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2, 0)
+
+[node name="Yaw" type="Node3D" parent="Head" unique_id=1805740610]
+
+[node name="Pitch" type="Node3D" parent="Head/Yaw" unique_id=824362255]
+
+[node name="Camera3D" type="Camera3D" parent="Head/Yaw/Pitch" unique_id=487506433]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.5)

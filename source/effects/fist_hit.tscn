@@ -1,8 +1,0 @@
-[gd_scene format=3 uid="uid://bh87sc78mey83"]
-
-[ext_resource type="AudioStream" uid="uid://g5ewuo5nng5q" path="res://assets/audio/sfx/weapon/fist_hitting.wav" id="1_kmm8e"]
-
-[node name="FistHit" type="AudioStreamPlayer3D" unique_id=1171067548]
-stream = ExtResource("1_kmm8e")
-attenuation_model = 2
-autoplay = true

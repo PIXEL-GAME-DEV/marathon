@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="Trigger" format=3 uid="uid://b2jgx4ytkaj81"]
 
 [ext_resource type="Resource" uid="uid://bmss22ihe5o22" path="res://source/weapon/projectile/pistol_bullet.tres" id="1_inj6i"]
-[ext_resource type="Script" uid="uid://bxtqllwunjfv6" path="res://source/script/resource_weapon_trigger.gd" id="1_pf5ct"]
+[ext_resource type="Script" uid="uid://bxtqllwunjfv6" path="res://source/resource_weapon_trigger.gd" id="1_pf5ct"]
 [ext_resource type="AudioStream" uid="uid://orq02u0jt7p6" path="res://assets/audio/sfx/weapon/magnum/firing/magnum_firing.tres" id="3_0tweb"]
 
 [resource]

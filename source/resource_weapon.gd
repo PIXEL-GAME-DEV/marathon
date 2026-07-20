@@ -1,4 +1,4 @@
-class_name Weapon
+class_name WeaponResource
 extends Resource
 @export_group("Weapon definition")
 @export var item_type: String
@@ -31,5 +31,5 @@ extends Resource
 @export_subgroup("Flags")
 @export_flags("Automatic", "Disappears after use", "Plays instant shell casing sound", "Overloads", "Random ammo on pickup", "Reloads in one hand", "Fires out of phase", "Fires under liquids", "Triggers share ammo", "Angular flipping on 2nd trigger") var flags
 @export_category("Trigger settings")
-@export var trigger_main: WeaponTrigger
-@export var trigger_secondary: WeaponTrigger
+@export var trigger_main: WeaponTriggerResource
+@export var trigger_secondary: WeaponTriggerResource

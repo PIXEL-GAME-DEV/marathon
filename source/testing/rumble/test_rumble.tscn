@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://b0a3060qgda6a"]
 
-[ext_resource type="Script" uid="uid://cl2orm6dqpc0p" path="res://source/testing/test_rumble.gd" id="1_m8yav"]
+[ext_resource type="Script" uid="uid://cl2orm6dqpc0p" path="res://source/testing/rumble/test_rumble.gd" id="1_m8yav"]
 
 [node name="TestRumble" type="Control" unique_id=277837234]
 layout_mode = 3

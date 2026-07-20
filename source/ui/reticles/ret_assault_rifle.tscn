@@ -5,6 +5,20 @@
 [ext_resource type="Script" uid="uid://crdl0hix1fm4a" path="res://source/ui/draw_arc.gd" id="4_46dgv"]
 [ext_resource type="Texture2D" uid="uid://drhaa80ogv7ea" path="res://assets/textures/ui/ret_machinegun.png" id="5_orsqc"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g4v7s"]
+bg_color = Color(1, 1, 1, 1)
+draw_center = false
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 2147483520
+corner_radius_top_right = 2147483520
+corner_radius_bottom_right = 2147483520
+corner_radius_bottom_left = 2147483520
+corner_detail = 20
+
 [node name="RetMachinegun" type="Control" unique_id=1394200693]
 modulate = Color(0, 1, 0, 1)
 custom_minimum_size = Vector2(64, 64)
@@ -85,6 +99,16 @@ start_angle = -0.29670597283903605
 end_angle = 0.29670597283903605
 count = 9
 color = Color(1, 1, 1, 0.5019608)
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=376170367]
+visible = false
+self_modulate = Color(1, 1, 1, 0.5019608)
+layout_mode = 0
+offset_left = 21.0
+offset_top = 21.0
+offset_right = 43.0
+offset_bottom = 43.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_g4v7s")
 
 [node name="Arc2" type="Control" parent="." unique_id=1146782914]
 layout_mode = 1

@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="MovementPhysicsResource" format=3 uid="uid://cg13nto2m6k84"]
+
+[ext_resource type="Script" uid="uid://il30ra52vdsk" path="res://source/resource_movement_physics.gd" id="1_hers1"]
+
+[resource]
+script = ExtResource("1_hers1")
+metadata/_custom_type_script = "uid://il30ra52vdsk"

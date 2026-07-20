@@ -2,9 +2,9 @@
 
 [ext_resource type="Theme" uid="uid://cfg2ef2ymkwqs" path="res://assets/themes/hud/hud.tres" id="1_ittib"]
 [ext_resource type="StyleBox" uid="uid://4ayhl2k8m13w" path="res://assets/themes/terminal/boxes/box_white.tres" id="2_ittib"]
-[ext_resource type="Shader" uid="uid://bnfb1gc3642ql" path="res://source/shader/canvas_static.gdshader" id="3_gmwc4"]
+[ext_resource type="Shader" path="res://source/shader/canvas_static.gdshader" id="3_gmwc4"]
 [ext_resource type="FontFile" uid="uid://bxxcn1niptpmm" path="res://assets/fonts/file/envy_code_r/envy_code_r_bold.ttf" id="4_hxfch"]
-[ext_resource type="StyleBox" uid="uid://c3yrxcymyxqjt" path="res://source/style_box/flat/rect_white.tres" id="5_g4j1i"]
+[ext_resource type="StyleBox" uid="uid://c3yrxcymyxqjt" path="res://source/ui/style_box/flat/stylebox_white_1px_border.tres" id="5_g4j1i"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_nrhv0"]
 shader = ExtResource("3_gmwc4")

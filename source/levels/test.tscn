@@ -2,7 +2,7 @@
 
 [ext_resource type="AudioStream" uid="uid://vlwja0fjvu17" path="res://assets/audio/music/07.ogg" id="1_52dl1"]
 [ext_resource type="Texture2D" uid="uid://d1o5iavmu57qq" path="res://assets/textures/icon.svg" id="2_52dl1"]
-[ext_resource type="PackedScene" uid="uid://dwhmovoxiuinc" path="res://source/characters/player.tscn" id="3_vvowu"]
+[ext_resource type="PackedScene" uid="uid://cvedu4bsduc52" path="res://source/monsters/player/player.tscn" id="3_52dl1"]
 
 [sub_resource type="PhysicalSkyMaterial" id="PhysicalSkyMaterial_f6kva"]
 
@@ -12,7 +12,7 @@ sky_material = SubResource("PhysicalSkyMaterial_f6kva")
 [sub_resource type="Environment" id="Environment_3d3br"]
 background_mode = 2
 sky = SubResource("Sky_0vjo8")
-tonemap_mode = 2
+tonemap_mode = 4
 tonemap_white = 7.0
 volumetric_fog_ambient_inject = 1.0
 volumetric_fog_temporal_reprojection_enabled = false
@@ -22,9 +22,6 @@ albedo_texture = ExtResource("2_52dl1")
 uv1_triplanar = true
 texture_filter = 5
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_g4v7s"]
-size = Vector3(4, 4, 4)
-
 [node name="Test" type="Node3D" unique_id=1419426252]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=2006432772]
@@ -32,6 +29,7 @@ environment = SubResource("Environment_3d3br")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=344983390]
 transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+light_energy = 0.09
 shadow_enabled = true
 directional_shadow_blend_splits = true
 
@@ -43,7 +41,7 @@ autoplay = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
 material_override = SubResource("StandardMaterial3D_s573y")
 use_collision = true
-size = Vector3(9999, 2, 9999)
+size = Vector3(64, 2, 64)
 
 [node name="CSGBox3D2" type="CSGBox3D" parent="CSGBox3D" unique_id=1616450487]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 1, 0)
@@ -75,23 +73,4 @@ material_override = SubResource("StandardMaterial3D_s573y")
 use_collision = true
 size = Vector3(2, 0.5, 2)
 
-[node name="Player" parent="." unique_id=1928738470 instance=ExtResource("3_vvowu")]
-transform = Transform3D(0.7009092, 0.7132505, 0, -0.6986824, 0.6865934, -0.20107795, -0.14341891, 0.14093739, 0.9795754, 0, 0.9, 0)
-
-[node name="RigidBody3D" type="RigidBody3D" parent="." unique_id=554934080]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, -32)
-visible = false
-axis_lock_linear_x = true
-axis_lock_linear_y = true
-axis_lock_angular_x = true
-axis_lock_angular_y = true
-axis_lock_angular_z = true
-mass = 1000.0
-constant_force = Vector3(0, 0, 9800)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D" unique_id=2142769764]
-shape = SubResource("BoxShape3D_g4v7s")
-disabled = true
-
-[node name="CSGBox3D" type="CSGBox3D" parent="RigidBody3D" unique_id=1638692461]
-size = Vector3(4, 4, 4)
+[node name="Player" parent="." unique_id=679833821 instance=ExtResource("3_52dl1")]

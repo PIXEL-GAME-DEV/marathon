@@ -1,7 +1,7 @@
 [gd_resource type="Theme" format=3 uid="uid://52qg0mkbgrw"]
 
 [ext_resource type="FontFile" uid="uid://bxkj54ra3b5d7" path="res://assets/fonts/file/marapfhont.ttf" id="1_dheye"]
-[ext_resource type="StyleBox" uid="uid://cpjwv2sa2srcb" path="res://source/style_box/flat/main_menu/m1/embossed_button_main_menu_m1.tres" id="2_ypbmu"]
+[ext_resource type="StyleBox" uid="uid://cpjwv2sa2srcb" path="res://source/ui/style_box/flat/main_menu/m1/embossed_button_main_menu_m1.tres" id="2_ypbmu"]
 
 [resource]
 EmbossedButton/base_type = &"Button"

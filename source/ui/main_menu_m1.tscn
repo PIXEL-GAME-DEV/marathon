@@ -2,9 +2,9 @@
 
 [ext_resource type="FontVariation" uid="uid://dwe65o3wjfyb3" path="res://assets/fonts/variation/logo.tres" id="1_5mdf1"]
 [ext_resource type="Theme" uid="uid://52qg0mkbgrw" path="res://assets/themes/main_menu_m1.tres" id="2_q8s3e"]
-[ext_resource type="StyleBox" uid="uid://cqbjb7d8lsw5u" path="res://source/style_box/flat/main_menu/m1/panel_big_main_menu_m1.tres" id="3_i13vf"]
+[ext_resource type="StyleBox" uid="uid://cqbjb7d8lsw5u" path="res://source/ui/style_box/flat/main_menu/m1/panel_big_main_menu_m1.tres" id="3_i13vf"]
 [ext_resource type="Texture2D" uid="uid://b4tcpff2eycia" path="res://assets/textures/grid.png" id="4_5mdf1"]
-[ext_resource type="StyleBox" uid="uid://dvgy3qd27gotu" path="res://source/style_box/flat/main_menu/m1/panel_small_main_menu_m1.tres" id="5_g4xvt"]
+[ext_resource type="StyleBox" uid="uid://dvgy3qd27gotu" path="res://source/ui/style_box/flat/main_menu/m1/panel_small_main_menu_m1.tres" id="5_g4xvt"]
 [ext_resource type="PackedScene" uid="uid://qa4rwfvd227v" path="res://source/ui/powered_by_godot.tscn" id="6_rsh4j"]
 
 [node name="MainMenuM1" type="Control" unique_id=836417162]

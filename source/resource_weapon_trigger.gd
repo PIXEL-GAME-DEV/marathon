@@ -1,6 +1,6 @@
-class_name WeaponTrigger
+class_name WeaponTriggerResource
 extends Resource
-@export var projectile: ProjectileResource
+@export var shot: ShotResource
 @export var rounds_per_magazine = 1
 @export var time_round: float = 0
 @export var time_recovery: float = 0

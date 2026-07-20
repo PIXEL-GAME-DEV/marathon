@@ -1,4 +1,5 @@
-class_name Projectile extends RigidBody3D
+class_name Projectile
+extends RigidBody3D
 
 
 @export var projectile: ProjectileResource

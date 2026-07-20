@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://delj2pq18sr36"]
 
-[ext_resource type="Script" uid="uid://ccbjofmfvujse" path="res://source/ui/draw_circle.gd" id="2_bilyw"]
+[ext_resource type="StyleBox" uid="uid://ca1dhs5injo7r" path="res://source/ui/style_box/flat/stylebox_circle.tres" id="2_bilyw"]
 [ext_resource type="Texture2D" uid="uid://m0rxktd0yt8b" path="res://assets/textures/ui/ret_alien.png" id="3_htmup"]
 
 [node name="RetAlien" type="Control" unique_id=1670870301]
@@ -22,62 +22,26 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("3_htmup")
 
-[node name="Control" type="Control" parent="." unique_id=34677029]
-custom_minimum_size = Vector2(8, 8)
-custom_maximum_size = Vector2(8, 8)
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 8.0
-offset_top = 4.0
-offset_right = 16.0
-offset_bottom = 12.0
-grow_horizontal = 2
-grow_vertical = 2
-script = ExtResource("2_bilyw")
-position = Vector2(4, 4)
-radius = 4.0
-color = Color(1, 1, 1, 0.8)
+[node name="Panel" type="Panel" parent="." unique_id=476349734]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 15.0
+offset_right = 36.0
+offset_bottom = 23.0
+theme_override_styles/panel = ExtResource("2_bilyw")
 
-[node name="Control2" type="Control" parent="." unique_id=1484739213]
-custom_minimum_size = Vector2(8, 8)
-custom_maximum_size = Vector2(8, 8)
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -16.0
-offset_top = 4.0
-offset_right = -8.0
-offset_bottom = 12.0
-grow_horizontal = 2
-grow_vertical = 2
-script = ExtResource("2_bilyw")
-position = Vector2(4, 4)
-radius = 4.0
-color = Color(1, 1, 1, 0.8)
+[node name="Panel2" type="Panel" parent="." unique_id=1646146490]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 36.0
+offset_right = 24.0
+offset_bottom = 44.0
+theme_override_styles/panel = ExtResource("2_bilyw")
 
-[node name="Control3" type="Control" parent="." unique_id=75185025]
-custom_minimum_size = Vector2(8, 8)
-custom_maximum_size = Vector2(8, 8)
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -4.0
-offset_top = -17.0
-offset_right = 4.0
-offset_bottom = -9.0
-grow_horizontal = 2
-grow_vertical = 2
-script = ExtResource("2_bilyw")
-position = Vector2(4, 4)
-radius = 4.0
-color = Color(1, 1, 1, 0.8)
+[node name="Panel3" type="Panel" parent="." unique_id=1069378342]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 36.0
+offset_right = 48.0
+offset_bottom = 44.0
+theme_override_styles/panel = ExtResource("2_bilyw")

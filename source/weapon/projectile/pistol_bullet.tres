@@ -2,10 +2,10 @@
 
 [ext_resource type="Resource" uid="uid://foh4hk64h3f0" path="res://source/weapon/projectile/ballistics/projectile.tres" id="1_ctxh7"]
 [ext_resource type="Resource" uid="uid://cpbimx3rxhmjr" path="res://source/weapon/damage/punch.tres" id="2_fr40q"]
-[ext_resource type="PackedScene" uid="uid://bwhsnoqkxo55s" path="res://source/bullet.tscn" id="2_v0kli"]
+[ext_resource type="PackedScene" uid="uid://bwhsnoqkxo55s" path="res://source/shots/bullet.tscn" id="2_v0kli"]
 [ext_resource type="Resource" uid="uid://bvuudl5ynu0at" path="res://source/weapon/detonation/bullet_ricochet.tres" id="3_1a16h"]
-[ext_resource type="Script" uid="uid://dewtggflv4fiq" path="res://source/script/resource_shot.gd" id="3_mlx6m"]
-[ext_resource type="Shape3D" uid="uid://b4rmdc3vtdx5n" path="res://source/shape/3d/sphere/point.tres" id="4_nk2ia"]
+[ext_resource type="Script" uid="uid://dewtggflv4fiq" path="res://source/resource_shot.gd" id="3_mlx6m"]
+[ext_resource type="Shape3D" path="res://source/shape/3d/sphere/point.tres" id="4_nk2ia"]
 
 [resource]
 script = ExtResource("3_mlx6m")

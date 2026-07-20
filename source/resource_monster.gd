@@ -1,4 +1,4 @@
-class_name Alien
+class_name MonsterResource
 extends Resource
 @export_group("Appearance & Sounds")
 @export_subgroup("Appearance")

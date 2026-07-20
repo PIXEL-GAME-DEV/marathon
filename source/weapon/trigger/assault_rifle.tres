@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="Trigger" format=3 uid="uid://dxond7xq4m1hs"]
 
 [ext_resource type="Resource" uid="uid://br4ijpxnabe3p" path="res://source/weapon/projectile/assault_rifle_bullet.tres" id="1_bhxeu"]
-[ext_resource type="Script" uid="uid://bxtqllwunjfv6" path="res://source/script/resource_weapon_trigger.gd" id="1_dr5nf"]
+[ext_resource type="Script" uid="uid://bxtqllwunjfv6" path="res://source/resource_weapon_trigger.gd" id="1_dr5nf"]
 [ext_resource type="AudioStream" uid="uid://buhopn1vutq2e" path="res://assets/audio/sfx/weapon/empty_gun.wav" id="3_ntr1s"]
 [ext_resource type="AudioStream" uid="uid://gmrv2nbw88t7" path="res://assets/audio/sfx/weapon/assault_rifle/assault_rifle_firing.wav" id="4_48cke"]
 

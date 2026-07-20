@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://pv0ubnxbyfwj" path="res://source/script/hud.gd" id="1_3thk5"]
 [ext_resource type="FontFile" uid="uid://bxxcn1niptpmm" path="res://assets/fonts/file/envy_code_r/envy_code_r_bold.ttf" id="2_m51vx"]
 [ext_resource type="Script" uid="uid://enxglbiimd8p" path="res://source/script/label_fps.gd" id="3_3thk5"]
-[ext_resource type="StyleBox" uid="uid://cfhnh5f0rcl2f" path="res://source/style_box/flat/grenade.tres" id="10_4mitx"]
+[ext_resource type="StyleBox" uid="uid://cfhnh5f0rcl2f" path="res://source/ui/style_box/flat/stylebox_grenade.tres" id="10_4mitx"]
 
 [node name="Hud" type="Control" unique_id=616931527]
 layout_mode = 3
@@ -101,3 +101,11 @@ theme_override_styles/panel = ExtResource("10_4mitx")
 custom_minimum_size = Vector2(7, 16)
 layout_mode = 2
 theme_override_styles/panel = ExtResource("10_4mitx")
+
+[node name="Currency" type="Label" parent="." unique_id=1362663921]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 31.0
+offset_right = 49.0
+offset_bottom = 54.0
+text = "¤$€¥£"
