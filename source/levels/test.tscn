@@ -22,6 +22,17 @@ albedo_texture = ExtResource("2_52dl1")
 uv1_triplanar = true
 texture_filter = 5
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_t4coc"]
+size = Vector3(99, 99, 99)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_52dl1"]
+cull_mode = 2
+
+[sub_resource type="QuadMesh" id="QuadMesh_sukl3"]
+size = Vector2(2, 1)
+subdivide_width = 15
+subdivide_depth = 7
+
 [node name="Test" type="Node3D" unique_id=1419426252]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=2006432772]
@@ -29,13 +40,12 @@ environment = SubResource("Environment_3d3br")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=344983390]
 transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
-light_energy = 0.09
+light_energy = 0.252
 shadow_enabled = true
 directional_shadow_blend_splits = true
 
 [node name="Music" type="AudioStreamPlayer" parent="." unique_id=577042299]
 stream = ExtResource("1_52dl1")
-autoplay = true
 
 [node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=1287824601]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
@@ -74,3 +84,57 @@ use_collision = true
 size = Vector3(2, 0.5, 2)
 
 [node name="Player" parent="." unique_id=679833821 instance=ExtResource("3_52dl1")]
+
+[node name="Area3D" type="Area3D" parent="." unique_id=1240359115]
+wind_force_magnitude = 10.0
+wind_source_path = NodePath(".")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=191991103]
+shape = SubResource("BoxShape3D_t4coc")
+
+[node name="SoftBody3D" type="SoftBody3D" parent="." unique_id=889493883]
+transform = Transform3D(-0.017977862, 0, 0.9998384, 0, 1, 0, -0.9998384, 0, -0.017977862, -3.5762787e-07, 0.80838794, -1.813632)
+material_override = SubResource("StandardMaterial3D_52dl1")
+mesh = SubResource("QuadMesh_sukl3")
+total_mass = 0.473
+linear_stiffness = 0.21
+pinned_points = [152, 16, 135, 151, 149, 118, 101, 150, 148, 84, 67, 50, 33]
+attachments/0/point_index = 152
+attachments/0/spatial_attachment_path = NodePath("")
+attachments/0/offset = Vector3(0, 0, 0)
+attachments/1/point_index = 16
+attachments/1/spatial_attachment_path = NodePath("")
+attachments/1/offset = Vector3(0, 0, 0)
+attachments/2/point_index = 135
+attachments/2/spatial_attachment_path = NodePath("")
+attachments/2/offset = Vector3(0, 0, 0)
+attachments/3/point_index = 151
+attachments/3/spatial_attachment_path = NodePath("")
+attachments/3/offset = Vector3(0, 0, 0)
+attachments/4/point_index = 149
+attachments/4/spatial_attachment_path = NodePath("")
+attachments/4/offset = Vector3(0, 0, 0)
+attachments/5/point_index = 118
+attachments/5/spatial_attachment_path = NodePath("")
+attachments/5/offset = Vector3(0, 0, 0)
+attachments/6/point_index = 101
+attachments/6/spatial_attachment_path = NodePath("")
+attachments/6/offset = Vector3(0, 0, 0)
+attachments/7/point_index = 150
+attachments/7/spatial_attachment_path = NodePath("")
+attachments/7/offset = Vector3(0, 0, 0)
+attachments/8/point_index = 148
+attachments/8/spatial_attachment_path = NodePath("")
+attachments/8/offset = Vector3(0, 0, 0)
+attachments/9/point_index = 84
+attachments/9/spatial_attachment_path = NodePath("")
+attachments/9/offset = Vector3(0, 0, 0)
+attachments/10/point_index = 67
+attachments/10/spatial_attachment_path = NodePath("")
+attachments/10/offset = Vector3(0, 0, 0)
+attachments/11/point_index = 50
+attachments/11/spatial_attachment_path = NodePath("")
+attachments/11/offset = Vector3(0, 0, 0)
+attachments/12/point_index = 33
+attachments/12/spatial_attachment_path = NodePath("")
+attachments/12/offset = Vector3(0, 0, 0)
